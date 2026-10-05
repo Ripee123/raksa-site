@@ -1,103 +1,69 @@
 <!doctype html>
-<html lang="fi">
+<html lang="fi" data-theme="system">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#071a2b">
-  <meta name="description" content="Raksa on suomalainen, ilman verkkoyhteyttä toimiva rakennuslaskuri Androidille.">
-  <meta property="og:title" content="Raksa | Rakentajan laskurit mukana työmaalla">
-  <meta property="og:description" content="Kolmiolaskin ja mitoituslaskin selkeässä Android-sovelluksessa.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f8fa">
+  <meta name="description" content="Raksa on suomalainen rakennuslaskuri kolmiolaskentaan ja mitoitukseen.">
+  <meta property="og:title" content="Raksa | Rakennuslaskuri">
+  <meta property="og:description" content="Kolmiolaskin ja mitoitus selkeässä, ilman verkkoyhteyttä toimivassa sovelluksessa.">
   <meta property="og:image" content="assets/social-preview.svg">
-  <title>Raksa | Rakentajan laskuri</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Raksa | Rakennuslaskuri</title>
+  <link rel="icon" href="assets/logo-light.png">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Siirry sisältöön</a>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Raksa etusivu">
-      <img src="assets/raksa-mark.svg" alt="" width="46" height="46">
-      <span><strong>RAKSA</strong><small>Rakennuslaskuri</small></span>
-    </a>
-    <nav aria-label="Päänavigaatio">
-      <a href="#ominaisuudet">Ominaisuudet</a>
-      <a href="#turvallinen">Tietosuoja</a>
-      <a href="privacy.html">Seloste</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="blueprint" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <div class="eyebrow"><span></span> Rakentajalle suunniteltu</div>
-        <h1>Mitat kohdalleen.<br><em>Suoraan työmaalla.</em></h1>
-        <p>Raksa kokoaa rakentamisen hyödylliset laskurit selkeään Android-sovellukseen. Nopea käyttää, toimii ilman verkkoyhteyttä ja pitää laskentatiedot omalla laitteellasi.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#ominaisuudet">Tutustu ominaisuuksiin</a>
-          <a class="button secondary" href="privacy.html">Tietosuojaseloste</a>
-        </div>
-        <div class="trust-row" aria-label="Sovelluksen pääominaisuudet">
-          <span>✓ Offline</span><span>✓ Suomi ja englanti</span><span>✓ Ei käyttäjätiliä</span>
-        </div>
+<a class="skip-link" href="#top" data-i18n="skip">Siirry sisältöön</a>
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="Raksa">
+    <picture><source srcset="assets/logo-dark.png" media="(prefers-color-scheme:dark)"><img class="brand-mark" src="assets/logo-light.png" alt=""></picture>
+    <span><strong>RAKSA</strong><small data-i18n="brandSubtitle">Rakennuslaskuri</small></span>
+  </a>
+  <div class="settings-wrap">
+    <button class="settings-button" type="button" aria-expanded="false" aria-controls="settingsPanel" data-i18n-aria="settingsOpen" title="Asetukset">⚙</button>
+    <section id="settingsPanel" class="settings-panel" hidden>
+      <label for="language" data-i18n="language">Kieli</label>
+      <select id="language"><option value="fi">Suomi</option><option value="en">English</option></select>
+      <label for="theme" data-i18n="theme">Teema</label>
+      <select id="theme"><option value="system" data-i18n="themeSystem">Järjestelmä</option><option value="light" data-i18n="themeLight">Vaalea</option><option value="dark" data-i18n="themeDark">Tumma</option></select>
+    </section>
+  </div>
+</header>
+<main id="top">
+  <section class="hero section-grid">
+    <div class="hero-copy">
+      <p class="eyebrow" data-i18n="eyebrow">Laskentatyökalut rakentamiseen</p>
+      <h1 data-i18n="heroTitle">Käytännön laskurit mukana työmaalla</h1>
+      <p class="lead" data-i18n="heroLead">Raksa auttaa tarkistamaan ristimitat, laskemaan suorakulmaisen kolmion arvot sekä suunnittelemaan toistuvat jaot selkeästi.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#features" data-i18n="explore">Tutustu työkaluihin</a>
+        <a class="button secondary" href="privacy.html" data-i18n="privacy">Tietosuoja</a>
       </div>
-      <div class="hero-visual" aria-label="Raksa-sovelluksen tyylitelty esittelykuva">
-        <div class="phone">
-          <div class="phone-top"></div>
-          <div class="appbar"><img src="assets/raksa-mark.svg" alt=""><span><b>RAKSA</b><small>Rakennuslaskuri</small></span><i>⚙</i></div>
-          <div class="phone-content">
-            <p class="phone-label">VALITSE TYÖKALU</p>
-            <div class="tool active"><span class="tool-icon">△</span><b>Kolmiolaskin</b><strong>›</strong></div>
-            <div class="tool"><span class="tool-icon ruler">⌁</span><b>Mitoitus</b><strong>›</strong></div>
-            <div class="result-mini">
-              <span>MITOITUS</span><b>600<small>mm</small></b>
-              <div><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-          </div>
-        </div>
-        <svg class="measure-arrow" viewBox="0 0 240 80" aria-hidden="true"><path d="M12 56h216M12 45v22M228 45v22M20 56l16-8m-16 8 16 8m184-8-16-8m16 8-16 8"/><text x="120" y="38">600 mm</text></svg>
-      </div>
-    </section>
+      <p class="offline-note" data-i18n="offline">Ydinlaskenta toimii ilman verkkoyhteyttä.</p>
+    </div>
+    <div class="hero-visual blueprint" aria-hidden="true">
+      <div class="triangle"><i></i><b>3</b><em>4</em><strong>5</strong></div>
+    </div>
+  </section>
 
-    <section class="stats" aria-label="Raksan ominaisuuksien yhteenveto">
-      <div><strong>2</strong><span>valmista laskuria</span></div>
-      <div><strong>2</strong><span>käyttökieltä</span></div>
-      <div><strong>0</strong><span>pakollista verkkoyhteyttä</span></div>
-      <div><strong>100 %</strong><span>laskenta laitteella</span></div>
-    </section>
+  <section id="features" class="features">
+    <div class="section-heading"><p class="eyebrow" data-i18n="available">Käytettävissä nyt</p><h2 data-i18n="toolsTitle">Kaksi työkalua, yksi yhtenäinen tapa työskennellä</h2></div>
+    <article class="feature-card">
+      <div class="feature-copy"><span class="number">01</span><h3 data-i18n="triangleTitle">Kolmiolaskin</h3><p data-i18n="triangleText">Syötä kaksi riippumatonta arvoa. Raksa laskee muut sivut, kulmat, pinta-alan ja piirin.</p><ul><li data-i18n="triangleA">Sivut ja kulmat</li><li data-i18n="triangleB">Pinta-ala ja piiri</li><li data-i18n="triangleC">Selkeä piirrosnäkymä</li></ul></div>
+      <picture class="phone-shot"><source class="shot-source" srcset="assets/triangle-dark-fi.jpg" media="(prefers-color-scheme:dark)"><img src="assets/triangle-light-fi.jpg" alt="Raksa-kolmiolaskimen näkymä" loading="lazy"></picture>
+    </article>
+    <article class="feature-card reverse">
+      <div class="feature-copy"><span class="number">02</span><h3 data-i18n="dimensionsTitle">Mitoitus</h3><p data-i18n="dimensionsText">Suunnittele mittapisteet ja materiaalien paikat jaetulla, mitoitetulla tai sovitetulla laskentatavalla.</p><ul><li data-i18n="dimensionsA">Jaotettu, Mitoitettu ja Sovitettu</li><li data-i18n="dimensionsB">Materiaalivahvuus ja mittapisteet</li><li data-i18n="dimensionsC">Tulokset selkeänä listana</li></ul></div>
+      <picture class="phone-shot"><source class="shot-source" srcset="assets/dimensions-dark-en.jpg" media="(prefers-color-scheme:dark)"><img src="assets/dimensions-light-fi.jpg" alt="Raksa-mitoituksen näkymä" loading="lazy"></picture>
+    </article>
+  </section>
 
-    <section id="ominaisuudet" class="section features">
-      <div class="section-heading"><span>TYÖKALUT</span><h2>Oleelliset laskurit ilman turhaa säätöä</h2><p>Selkeät syötteet, havainnolliset tulokset ja rakennustyöhön sopiva käyttöliittymä.</p></div>
-      <div class="feature-grid">
-        <article class="feature-card triangle-card">
-          <div class="card-art triangle-art" aria-hidden="true"><svg viewBox="0 0 320 180"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20"/></pattern></defs><rect width="320" height="180" fill="url(#grid)"/><path class="shape" d="M72 142V38l174 104z"/><path class="angle" d="M72 122h20v20"/><circle cx="72" cy="38" r="4"/><circle cx="72" cy="142" r="4"/><circle cx="246" cy="142" r="4"/><text x="50" y="92">b</text><text x="156" y="162">a</text><text x="166" y="78">c</text></svg></div>
-          <div class="card-body"><span class="number">01</span><h3>Kolmiolaskin</h3><p>Ratkaise suorakulmaisen kolmion sivut, kulmat, pinta-ala ja piiri kahdesta annetusta arvosta.</p><ul><li>Yhdeksän hyväksyttyä syöteparia</li><li>Automaattinen yksikkömuunnos</li><li>Tarkkuus 0–3 desimaalia</li></ul></div>
-        </article>
-        <article class="feature-card dimension-card">
-          <div class="card-art ruler-art" aria-hidden="true"><div class="rail"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="blocks"><b></b><b></b><b></b><b></b><b></b></div><span>0</span><span>600</span><span>1200</span><span>1800</span><span>2400</span></div>
-          <div class="card-body"><span class="number">02</span><h3>Mitoitus</h3><p>Laske mittapisteet, jaot ja materiaalien sijainnit jaotetulla, mitoitetulla tai sovitetulla tavalla.</p><ul><li>Materiaalivahvuuden huomiointi</li><li>Keskitä väli tai piste</li><li>Kopioitava mittapistelista</li></ul></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="turvallinen" class="privacy-band">
-      <div class="shield" aria-hidden="true"><svg viewBox="0 0 100 116"><path d="M50 5 88 19v32c0 27-15 47-38 59C27 98 12 78 12 51V19z"/><path d="m31 56 13 13 27-30"/></svg></div>
-      <div><span>TIETOSUOJA ENSIN</span><h2>Laskelmasi pysyvät laitteellasi</h2><p>Raksa ei vaadi käyttäjätiliä eikä lähetä käyttäjän syöttämiä laskentatietoja internetiin. Asetukset ja näkymien tila tallennetaan paikallisesti sovelluksen toimintaa varten.</p></div>
-      <a class="button light" href="privacy.html">Lue tietosuojaseloste</a>
-    </section>
-
-    <section class="section roadmap">
-      <div class="section-heading"><span>KEHITYS JATKUU</span><h2>Rakentajan työkalupakki kasvaa</h2></div>
-      <div class="roadmap-row"><div class="done"><b>✓</b><span><strong>Nyt</strong>Kolmiolaskin ja mitoitus</span></div><div><b>03</b><span><strong>Seuraavaksi</strong>Pinta-alat ja tilavuudet</span></div><div><b>04</b><span><strong>Myöhemmin</strong>Materiaalimenekit ja työmaat</span></div></div>
-    </section>
-
-    <section class="contact">
-      <div><span>YHTEYS</span><h2>Kysyttävää Raksasta?</h2><p>Palautteet ja kehitysehdotukset ovat tervetulleita.</p></div>
-      <a class="button primary" href="mailto:Risto.rikalo@gmail.com">Risto.rikalo@gmail.com</a>
-    </section>
-  </main>
-
-  <footer><a class="brand footer-brand" href="index.html"><img src="assets/raksa-mark.svg" alt="" width="38" height="38"><span><strong>RAKSA</strong><small>Rakennuslaskuri</small></span></a><p>© 2026 Risto Lohi</p><div><a href="privacy.html">Tietosuojaseloste</a><a href="mailto:Risto.rikalo@gmail.com">Yhteystiedot</a></div></footer>
-</body>
-</html>
+  <section class="coming section-grid">
+    <div><p class="eyebrow" data-i18n="next">Seuraavaksi</p><h2 data-i18n="growsTitle">Raksa kasvaa vaiheittain</h2><p data-i18n="growsText">Uudet työkalut lisätään niin, että kokonaisuus säilyy nopeana, selkeänä ja käytännöllisenä.</p></div>
+    <ul class="coming-list"><li data-i18n="areas">Pinta-alat ja tilavuudet</li><li data-i18n="materials">Materiaalimenekit</li><li data-i18n="more">Lisää rakentamisen käytännön laskureita</li></ul>
+  </section>
+</main>
+<footer><div><strong>RAKSA</strong><span data-i18n="brandSubtitle">Rakennuslaskuri</span></div><nav><a href="#top" data-i18n="home">Etusivu</a><a href="privacy.html" data-i18n="privacy">Tietosuoja</a></nav><small>© 2026 Risto Lohi</small></footer>
+</body></html>
