@@ -1,0 +1,21 @@
+ CNAME                          |   2 [32m+[m[31m-[m
+ assets/dimensions-dark-en.jpg  | Bin [31m229520[m -> [32m0[m bytes
+ .../dimensions-dark-fi-r8.jpg  | Bin [31m222465[m -> [32m0[m bytes
+ assets/dimensions-dark-fi.jpg  | Bin [31m222465[m -> [32m0[m bytes
+ assets/dimensions-light-en.jpg | Bin [31m237261[m -> [32m0[m bytes
+ assets/dimensions-light-fi.jpg | Bin [31m230231[m -> [32m0[m bytes
+ assets/favicon.svg             |   1 [31m-[m
+ assets/logo-dark.png           | Bin [31m222561[m -> [32m0[m bytes
+ assets/logo-light.png          | Bin [31m225559[m -> [32m0[m bytes
+ assets/raksa-mark.svg          |   1 [31m-[m
+ assets/social-preview.svg      |   1 [31m-[m
+ assets/triangle-dark-en.jpg    | Bin [31m412804[m -> [32m0[m bytes
+ assets/triangle-dark-fi.jpg    | Bin [31m407904[m -> [32m0[m bytes
+ assets/triangle-light-en.jpg   | Bin [31m458891[m -> [32m0[m bytes
+ assets/triangle-light-fi.jpg   | Bin [31m454094[m -> [32m0[m bytes
+ index.html                     |  15 [32m++++++++[m[31m-[m
+ privacy.html                   |  15 [32m++++++++[m[31m-[m
+ script.js                      |   1 [31m-[m
+ snapshots/snapshot_full.txt    |  10 [32m+[m[31m-----[m
+ style.css                      |   1 [31m-[m
+ 20 files changed, 30 insertions(+), 17 deletions(-)

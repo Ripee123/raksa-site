@@ -1,17 +1,9 @@
 RAKSA-SITE-PROJEKTIN TILANNEKUVA
 Tyyppi: FULL
-Luotu: 2026-10-05 15:44:47
+Luotu: 2026-10-05 15:47:20
 Projektin juuri: /storage/emulated/0/AAA/raksa-site
 ============================================================
 ## main...origin/main
-A  assets/dimensions-dark-fi-r8.jpg
-M  assets/dimensions-dark-fi.jpg
-M  index.html
-M  privacy.html
-M  script.js
-M  snap.sh
-M  style.css
-D  visual-fixes.js
 ?? snapshots/snapshot_full.txt.tmp
 
 ### TIEDOSTO: .nojekyll
