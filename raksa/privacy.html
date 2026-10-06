@@ -1,39 +1,86 @@
 <!doctype html>
-<html lang="fi">
+<html lang="fi" data-theme="system">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Raksa | Tietosuojaseloste</title>
-<style>
-:root{color-scheme:light dark;--bg:#f6f8fa;--card:#fff;--text:#17212b;--muted:#53616d;--line:#c9d3dc;--blue:#1769aa;--orange:#c65a16}
-@media(prefers-color-scheme:dark){:root{--bg:#080d18;--card:#111725;--text:#f4f5f7;--muted:#b9c0cc;--line:#283143;--blue:#4a9be8;--orange:#f09455}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}header,main,footer{width:min(900px,calc(100% - 32px));margin:auto}header{padding:42px 0 20px}.brand{color:var(--blue);font-weight:750;letter-spacing:.1em;text-transform:uppercase}h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:.25rem 0}.lead,footer{color:var(--muted)}nav,section{background:var(--card);border:1px solid var(--line);border-radius:16px;margin:16px 0;padding:20px}nav a,a{color:var(--blue)}nav a{font-weight:700;margin-right:18px}.summary{border-left:5px solid var(--orange)}h2{margin:0 0 8px;font-size:1.3rem}p,ul{margin:7px 0}footer{padding:14px 0 40px}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f8fa">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js?v=8" defer></script>
+  <meta name="description" content="Raksa-sovelluksen ja rikalo.fi-verkkosivuston tietosuojaseloste.">
+  <meta property="og:title" content="Tietosuojaseloste | Raksa">
+  <meta property="og:description" content="Tietoa Raksa-sovelluksen ja rikalo.fi-verkkosivuston tietojen käsittelystä.">
+  <meta property="og:image" content="assets/social-preview.svg">
+  <link rel="canonical" href="https://www.rikalo.fi/raksa/privacy.html">
+  <title>Tietosuojaseloste | Raksa</title>
 </head>
 <body>
-<header><div class="brand">Raksa · Rakennuslaskuri</div><h1>Tietosuojaseloste</h1><p class="lead">Raksa-Android-sovelluksen tietojen käsittely</p><p>Pakettitunnus: <strong>fi.rikalo.raksa</strong><br>Päivitetty 6.10.2026</p></header>
-<main>
-<nav aria-label="Kielivalinta"><a href="#suomi">Suomi</a><a href="#english" lang="en">English</a></nav>
-<div id="suomi">
-<section class="summary"><h2>Tiivistelmä</h2><p>Raksa toimii ilman käyttäjätiliä. Laskenta tapahtuu laitteessa, eikä Raksa lähetä laskenta-arvoja kehittäjälle tai ulkoiseen analytiikka-, mainos- tai pilvipalveluun. Nykyinen versio ei sisällä mainoksia, analytiikkaa tai kolmannen osapuolen seurantaa.</p></section>
-<section><h2>1. Rekisterinpitäjä ja yhteystiedot</h2><p>Raksa-sovelluksen kehittäjä ja tietojen käsittelystä vastaava taho on <strong>Risto Lohi</strong>.</p><p>Tietosuojakysymykset: <a href="mailto:Risto.rikalo@gmail.com">Risto.rikalo@gmail.com</a><br>Verkkosivusto: <a href="https://rikalo.fi/">https://rikalo.fi/</a></p></section>
-<section><h2>2. Sovelluksen käsittelemät tiedot</h2><p>Raksa käsittelee käyttäjän laitteessa sovelluksen toimintaan tarvittavia tietoja:</p><ul><li>laskureihin syötetyt mitat ja laskinten tila</li><li>kieli, teema, mittayksikkö ja desimaalit</li><li>mitoituksen ja kolmiolaskimen paikalliset asetukset.</li></ul><p>Tietoja käytetään laskentaan sekä käyttäjän valintojen ja keskeneräisen tilan palauttamiseen.</p></section>
-<section><h2>3. Kerääminen, jakaminen ja käyttöoikeudet</h2><p>Raksa ei kerää tai siirrä sovelluksen tietoja kehittäjän palvelimelle. Tietoja ei myydä eikä luovuteta kehittäjän toimesta kolmansille osapuolille. Sovelluksessa ei ole käyttäjätiliä, mainoksia, analytiikkaa, kaatumisraportointia tai sijainnin seurantaa.</p><p>Sovellus ei pyydä kamera-, mikrofoni-, sijainti-, yhteystieto-, tiedosto- tai muuta vastaavaa Android-käyttöoikeutta. Laskentatoiminnot eivät tarvitse internetyhteyttä.</p></section>
-<section><h2>4. Paikallinen tallennus ja Android-varmuuskopiointi</h2><p>Asetukset ja laskinten tila tallennetaan sovelluksen yksityiseen paikalliseen tallennustilaan.</p><p>Raksa sallii Androidin varmuuskopiointi- ja laitteensiirtotoiminnot asetuksille ja laskinten tilalle. Jos Android-varmuuskopiointi on käytössä, käyttöjärjestelmä voi siirtää tiedot Googlen hallinnoimaan varmuuskopioon tai uuteen laitteeseen. Käyttäjä hallitsee varmuuskopiointia laitteen ja Google-tilin asetuksissa.</p></section>
-<section><h2>5. Säilytys ja poistaminen</h2><p>Paikalliset tiedot säilyvät, kunnes käyttäjä muuttaa tai tyhjentää niitä, tyhjentää sovelluksen tiedot Androidin asetuksista tai poistaa sovelluksen. Varmuuskopion säilytys määräytyy Androidin ja Google-tilin asetusten mukaan.</p><p>Raksalla ei ole kehittäjän ylläpitämää käyttäjätiliä tai palvelinrekisteriä, joten kehittäjällä ei ole käyttäjäkohtaista palvelindataa poistettavana.</p></section>
-<section><h2>6. Lapset ja tietoturva</h2><p>Raksa on yleiskäyttöinen rakentamisen laskenta- ja mitoitustyökalu. Se ei pyydä ikää eikä tietoisesti kerää henkilötietoja lapsilta tai muilta käyttäjiltä.</p><p>Tietojen käsittely on minimoitu sovelluksen toiminnan edellyttämään paikalliseen tallennukseen. Käyttäjän kannattaa suojata laitteensa näytön lukituksella ja pitää ohjelmistot ajan tasalla.</p></section>
-<section><h2>7. Muutokset</h2><p>Selostetta päivitetään, jos Raksa-sovelluksen ominaisuudet tai tietojen käsittely muuttuvat. Uusin versio julkaistaan tällä sivulla.</p></section>
-</div>
-<div id="english" lang="en">
-<section class="summary"><h2>Privacy Policy</h2><p>Raksa works without a user account. Calculations are performed on the device, and Raksa does not transmit calculation values to the developer or to external analytics, advertising, or cloud services. The current version contains no advertising, analytics, or third-party tracking.</p></section>
-<section><h2>1. Controller and contact</h2><p>The developer responsible for Raksa and its data handling is <strong>Risto Lohi</strong>.</p><p>Privacy questions: <a href="mailto:Risto.rikalo@gmail.com">Risto.rikalo@gmail.com</a><br>Website: <a href="https://rikalo.fi/">https://rikalo.fi/</a></p></section>
-<section><h2>2. Data processed by the app</h2><p>Raksa processes information locally on the user's device, including calculator inputs and state, language and theme choices, measurement units, decimal settings, and other calculator preferences. The information is used to perform calculations and restore the user's choices and unfinished state.</p></section>
-<section><h2>3. Collection, sharing, and permissions</h2><p>Raksa does not collect or transfer app data to a developer-operated server. The developer does not sell or disclose the data to third parties. The app has no user account, advertising, analytics, crash reporting, or location tracking.</p><p>The app does not request camera, microphone, location, contacts, file access, or similar Android permissions. Its calculations do not require an internet connection.</p></section>
-<section><h2>4. Local storage and Android backup</h2><p>Preferences and calculator state are stored in the app's private local storage.</p><p>Raksa permits Android backup and device transfer for preferences and calculator state. If Android backup is enabled, the operating system may transfer the information to a Google-managed backup or a new device. Users manage backup through their device and Google Account settings.</p></section>
-<section><h2>5. Retention and deletion</h2><p>Local information remains until the user changes or clears it, clears the app's data in Android settings, or uninstalls the app. Backup retention is controlled by Android and Google Account settings.</p><p>Raksa has no developer-operated account system or server database, so the developer has no user-specific server data to delete.</p></section>
-<section><h2>6. Children and security</h2><p>Raksa is a general-purpose construction calculation and dimensioning tool. It does not request age and does not knowingly collect personal data from children or other users.</p><p>Data handling is minimized to local storage required for operation. Users should protect their device with a screen lock and keep software up to date.</p></section>
-<section><h2>7. Changes</h2><p>This policy will be updated if Raksa's features or data practices change. The latest version will be published on this page.</p></section>
-</div>
-</main><footer>© 2026 Risto Lohi · Raksa</footer>
-</body></html>
+  <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
+
+  <header>
+    <a class="brand" href="index.html" aria-label="Raksa">
+      <img class="brand-logo" src="assets/logo-light.png" alt="">
+      <span>
+        <b>RAKSA</b>
+        <small data-i18n="subtitle">Rakennuslaskuri</small>
+      </span>
+    </a>
+
+    <div class="settings">
+      <button id="settingsButton" aria-label="Asetukset" aria-controls="settingsPanel" aria-expanded="false">⚙</button>
+      <div id="settingsPanel" hidden>
+        <label for="language" data-i18n="language">Kieli</label>
+        <select id="language">
+          <option value="fi">Suomi</option>
+          <option value="en">English</option>
+        </select>
+        <label for="theme" data-i18n="theme">Teema</label>
+        <select id="theme">
+          <option value="system" data-i18n="system">Järjestelmä</option>
+          <option value="light" data-i18n="light">Vaalea</option>
+          <option value="dark" data-i18n="dark">Tumma</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="legal">
+    <p class="eyebrow" data-i18n="privacy">Tietosuoja</p>
+    <h1 data-i18n="privacyTitle">Tietosuojaseloste</h1>
+    <p class="lead" data-i18n="privacyLead">Tämä seloste kertoo, mitä tietoja Raksa-sovellus ja rikalo.fi käsittelevät nykyisessä toteutuksessa.</p>
+
+    <div class="meta" aria-label="Selosteen perustiedot">
+      <span>
+        <b data-i18n="effective">Voimassa alkaen</b>
+        <strong>6.10.2026</strong>
+      </span>
+      <span>
+        <b data-i18n="app">Sovellus</b>
+        <strong>Raksa Android</strong>
+      </span>
+      <span>
+        <b data-i18n="package">Sovellustunnus</b>
+        <strong>fi.rikalo.raksa</strong>
+      </span>
+      <span>
+        <b data-i18n="controller">Rekisterinpitäjä</b>
+        <strong>Risto Lohi</strong>
+      </span>
+    </div>
+
+    <div id="policy" aria-live="polite"></div>
+
+    <div class="actions">
+      <a class="secondary" href="index.html" data-i18n="back">Takaisin etusivulle</a>
+    </div>
+  </main>
+
+  <footer>
+    <b>RAKSA</b>
+    <a href="index.html" data-i18n="back">Takaisin etusivulle</a>
+    <a href="mailto:Risto.rikalo@gmail.com">Risto.rikalo@gmail.com</a>
+    <small>© 2026 Risto Lohi</small>
+  </footer>
+</body>
+</html>
