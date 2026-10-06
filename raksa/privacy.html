@@ -7,78 +7,70 @@
   <meta name="theme-color" content="#f6f8fa">
   <link rel="icon" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="privacy.css">
   <script src="script.js?v=8" defer></script>
+  <script src="privacy.js?v=1" defer></script>
   <meta name="description" content="Raksa-sovelluksen ja rikalo.fi-verkkosivuston tietosuojaseloste.">
   <meta property="og:title" content="Tietosuojaseloste | Raksa">
-  <meta property="og:description" content="Tietoa Raksa-sovelluksen ja rikalo.fi-verkkosivuston tietojen käsittelystä.">
+  <meta property="og:description" content="Selkeä kuvaus Raksa-sovelluksen ja rikalo.fi-verkkosivuston tietojen käsittelystä.">
   <meta property="og:image" content="assets/social-preview.svg">
   <link rel="canonical" href="https://www.rikalo.fi/raksa/privacy.html">
   <title>Tietosuojaseloste | Raksa</title>
 </head>
-<body>
+<body class="privacy-page">
   <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
-
   <header>
     <a class="brand" href="index.html" aria-label="Raksa">
       <img class="brand-logo" src="assets/logo-light.png" alt="">
-      <span>
-        <b>RAKSA</b>
-        <small data-i18n="subtitle">Rakennuslaskuri</small>
-      </span>
+      <span><b>RAKSA</b><small data-i18n="subtitle">Rakennuslaskuri</small></span>
     </a>
-
     <div class="settings">
       <button id="settingsButton" aria-label="Asetukset" aria-controls="settingsPanel" aria-expanded="false">⚙</button>
       <div id="settingsPanel" hidden>
         <label for="language" data-i18n="language">Kieli</label>
-        <select id="language">
-          <option value="fi">Suomi</option>
-          <option value="en">English</option>
-        </select>
+        <select id="language"><option value="fi">Suomi</option><option value="en">English</option></select>
         <label for="theme" data-i18n="theme">Teema</label>
-        <select id="theme">
-          <option value="system" data-i18n="system">Järjestelmä</option>
-          <option value="light" data-i18n="light">Vaalea</option>
-          <option value="dark" data-i18n="dark">Tumma</option>
-        </select>
+        <select id="theme"><option value="system" data-i18n="system">Järjestelmä</option><option value="light" data-i18n="light">Vaalea</option><option value="dark" data-i18n="dark">Tumma</option></select>
       </div>
     </div>
   </header>
 
-  <main id="main" class="legal">
-    <p class="eyebrow" data-i18n="privacy">Tietosuoja</p>
-    <h1 data-i18n="privacyTitle">Tietosuojaseloste</h1>
-    <p class="lead" data-i18n="privacyLead">Tämä seloste kertoo, mitä tietoja Raksa-sovellus ja rikalo.fi käsittelevät nykyisessä toteutuksessa.</p>
+  <main id="main" class="privacy-main">
+    <section class="privacy-hero" aria-labelledby="privacy-title">
+      <div>
+        <p class="eyebrow" id="privacy-eyebrow">TIETOSUOJA</p>
+        <h1 id="privacy-title">Tietosuojaseloste</h1>
+        <p class="lead" id="privacy-lead">Raksa toimii ilman käyttäjätiliä. Laskenta tapahtuu laitteella, eikä laskenta-arvoja lähetetä Raksan palvelimelle.</p>
+        <p class="privacy-updated"><span id="updated-label">Päivitetty</span> <time datetime="2026-10-06">6.10.2026</time></p>
+      </div>
+      <div class="privacy-mark" aria-hidden="true">
+        <img src="assets/raksa-mark.svg" alt="">
+      </div>
+    </section>
 
-    <div class="meta" aria-label="Selosteen perustiedot">
-      <span>
-        <b data-i18n="effective">Voimassa alkaen</b>
-        <strong>6.10.2026</strong>
-      </span>
-      <span>
-        <b data-i18n="app">Sovellus</b>
-        <strong>Raksa Android</strong>
-      </span>
-      <span>
-        <b data-i18n="package">Sovellustunnus</b>
-        <strong>fi.rikalo.raksa</strong>
-      </span>
-      <span>
-        <b data-i18n="controller">Rekisterinpitäjä</b>
-        <strong>Risto Lohi</strong>
-      </span>
-    </div>
+    <section class="privacy-facts" aria-labelledby="facts-title">
+      <h2 class="sr-only" id="facts-title">Tietosuojan pääkohdat</h2>
+      <article><span aria-hidden="true">01</span><strong id="fact-account-title">Ei käyttäjätiliä</strong><p id="fact-account-text">Raksa ei vaadi rekisteröitymistä tai kirjautumista.</p></article>
+      <article><span aria-hidden="true">02</span><strong id="fact-device-title">Laskenta laitteella</strong><p id="fact-device-text">Mitat ja laskenta-arvot käsitellään paikallisesti.</p></article>
+      <article><span aria-hidden="true">03</span><strong id="fact-tracking-title">Ei seurantaa</strong><p id="fact-tracking-text">Ei mainoksia, analytiikkaa eikä profilointia.</p></article>
+      <article><span aria-hidden="true">04</span><strong id="fact-permissions-title">Ei käyttöoikeuksia</strong><p id="fact-permissions-text">Nykyinen sovellus ei pyydä Android-käyttöoikeuksia.</p></article>
+    </section>
 
-    <div id="policy" aria-live="polite"></div>
-
-    <div class="actions">
-      <a class="secondary" href="index.html" data-i18n="back">Takaisin etusivulle</a>
+    <div class="privacy-layout">
+      <nav class="privacy-toc" aria-label="Tietosuojaselosteen sisältö">
+        <p id="toc-title">Sisältö</p>
+        <a href="#application" id="toc-app">Sovellus</a>
+        <a href="#website" id="toc-web">Verkkosivusto</a>
+        <a href="#control" id="toc-control">Tietojen hallinta</a>
+        <a href="#contact" id="toc-contact">Yhteystiedot ja muutokset</a>
+      </nav>
+      <div id="privacy-content" class="privacy-content" aria-live="polite"></div>
     </div>
   </main>
 
   <footer>
     <b>RAKSA</b>
-    <a href="index.html" data-i18n="back">Takaisin etusivulle</a>
+    <a href="index.html" id="footer-home">Etusivu</a>
     <a href="mailto:Risto.rikalo@gmail.com">Risto.rikalo@gmail.com</a>
     <small>© 2026 Risto Lohi</small>
   </footer>
