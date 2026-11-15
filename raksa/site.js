@@ -112,7 +112,7 @@
       img.src = `assets/screens/${img.dataset.shot}-${theme}-${lang}.webp`;
     });
     document.querySelectorAll('.brand-logo').forEach((img) => {
-      img.src = `assets/logo-${theme}.png`;
+      img.src = `assets/logo-${theme === 'dark' ? 'graphite' : 'silver'}.png`;
     });
   }
 
@@ -155,14 +155,14 @@
   /* Contact details are kept out of the HTML source to reduce scraping; they are decoded only in the browser. */
   const decode = (value) => [...atob(value)].reverse().join('');
   const CONTACT = { name: 'aWhvTCBvdHNpUg==', email: 'bW9jLmxpYW1nQG9sYWtpci5vdHNpUg==' };
-  document.querySelectorAll('[data-contact="name"]').forEach((el) => { el.textContent = decode(CONTACT.name); });
-  document.querySelectorAll('[data-contact="email"] .reveal').forEach((btn) => {
+  document.querySelectorAll('[data-contact] .reveal').forEach((btn) => {
     btn.addEventListener('click', () => {
       const address = decode(CONTACT.email);
+      const holder = btn.parentElement;
       const link = document.createElement('a');
       link.href = `mailto:${address}`;
       link.textContent = address;
-      btn.replaceWith(link);
+      holder.replaceChildren(document.createTextNode(`${decode(CONTACT.name)} · `), link);
       link.focus();
     });
   });
