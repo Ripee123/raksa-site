@@ -5,7 +5,7 @@
   const STRINGS = {
     fi: {
       skip: 'Siirry sisältöön', subtitle: 'Rakennuslaskuri', settings: 'Asetukset', language: 'Kieli', theme: 'Teema',
-      system: 'Järjestelmä', light: 'Vaalea', dark: 'Tumma', privacy: 'Tietosuoja', home: 'Etusivu', footerNav: 'Alatunniste',
+      system: 'Järjestelmä', light: 'Vaalea', dark: 'Tumma', privacy: 'Tietosuoja', home: 'Etusivu', contact: 'Yhteystiedot', footerNav: 'Alatunniste',
       version: 'Versio 1.2.806',
       pageTitle: 'Raksa | Rakennuslaskuri',
       pageDescription: 'Raksa on Android-sovellus suorakulmaisen kolmion laskentaan ja rakennustyön mitoitukseen. Toimii ilman verkkoyhteyttä ja käyttäjätiliä.',
@@ -50,7 +50,7 @@
     },
     en: {
       skip: 'Skip to content', subtitle: 'Construction calculator', settings: 'Settings', language: 'Language', theme: 'Theme',
-      system: 'System', light: 'Light', dark: 'Dark', privacy: 'Privacy', home: 'Home', footerNav: 'Footer',
+      system: 'System', light: 'Light', dark: 'Dark', privacy: 'Privacy', home: 'Home', contact: 'Contact', footerNav: 'Footer',
       version: 'Version 1.2.806',
       pageTitle: 'Raksa | Construction calculator',
       pageDescription: 'Raksa is an Android app for right-triangle calculations and construction dimensioning. Works offline and without a user account.',
@@ -145,9 +145,27 @@
       if (text) el.content = text;
     });
     document.title = isPrivacy ? copy.privacyPageTitle : copy.pageTitle;
+    document.querySelectorAll('[data-contact-link]').forEach((a) => {
+      a.hash = root.lang === 'en' ? 'contact' : 'yhteystiedot';
+    });
     if (save) store.set('raksa-language', root.lang);
     refreshImages();
   }
+
+  /* Contact details are kept out of the HTML source to reduce scraping; they are decoded only in the browser. */
+  const decode = (value) => [...atob(value)].reverse().join('');
+  const CONTACT = { name: 'aWhvTCBvdHNpUg==', email: 'bW9jLmxpYW1nQG9sYWtpci5vdHNpUg==' };
+  document.querySelectorAll('[data-contact="name"]').forEach((el) => { el.textContent = decode(CONTACT.name); });
+  document.querySelectorAll('[data-contact="email"] .reveal').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const address = decode(CONTACT.email);
+      const link = document.createElement('a');
+      link.href = `mailto:${address}`;
+      link.textContent = address;
+      btn.replaceWith(link);
+      link.focus();
+    });
+  });
 
   const themeSelect = document.getElementById('theme');
   const languageSelect = document.getElementById('language');
