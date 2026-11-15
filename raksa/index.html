@@ -1,76 +1,321 @@
-<!doctype html><html lang="en" data-theme="system">
+<!doctype html>
+<html lang="fi" data-theme="system">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f4f5f7">
-<link rel="icon" href="assets/favicon.svg">
-<link rel="stylesheet" href="style.css?v=16">
-<script src="script.js?v=16" defer></script>
-<meta name="description" content="Raksa is an Android app for right-triangle calculations and construction dimensioning.">
-<meta property="og:title" content="Raksa | Construction calculator">
-<meta property="og:description" content="Triangle calculation and dimensioning for practical construction work.">
-<meta property="og:image" content="assets/social-preview.svg">
-<meta property="og:url" content="https://www.rikalo.fi/raksa/">
+<meta name="theme-color" content="#f6f8fa">
+<title data-i18n="metaTitle">Raksa – rakennuslaskuri Androidille</title>
+<meta name="description" content="Raksa on Android-sovellus suorakulmaisen kolmion laskentaan ja rakenteiden mitoitukseen. Toimii ilman verkkoyhteyttä, käyttäjätiliä tai mainoksia." data-i18n-attr="content:metaDescription">
+<link rel="canonical" href="https://www.rikalo.fi/raksa/">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<title>Raksa | Construction calculator</title>
+<meta property="og:site_name" content="Raksa">
+<meta property="og:title" content="Raksa – rakennuslaskuri Androidille" data-i18n-attr="content:metaTitle">
+<meta property="og:description" content="Kolmiolaskin ja mitoitus rakennustyön käytännön tilanteisiin. Toimii ilman verkkoyhteyttä." data-i18n-attr="content:ogDescription">
+<meta property="og:image" content="https://www.rikalo.fi/raksa/assets/social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://www.rikalo.fi/raksa/">
+<meta name="twitter:card" content="summary_large_image">
+<script>(function(){var t;try{t=localStorage.getItem('raksa-theme')}catch(e){}var d=t==='dark'||(t!=='light'&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.resolvedTheme=d?'dark':'light'})()</script>
+<link rel="stylesheet" href="style.css?v=20">
 </head>
-<body><a class="skip" href="#main" data-i18n="skip">Skip to content</a>
-<header><a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-light.png" alt=""><span><b>RAKSA</b><small data-i18n="subtitle">Construction calculator</small></span></a>
-<div class="settings"><button id="settingsButton" type="button" aria-label="Settings" data-i18n-aria="settingsLabel" aria-controls="settingsPanel" aria-expanded="false"><svg class="material-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94a7.8 7.8 0 0 0 .05-.94 7.8 7.8 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94L14.38 2.8a.5.5 0 0 0-.5-.4h-3.84a.5.5 0 0 0-.49.4L9.18 5.32c-.58.24-1.12.55-1.62.94L5.17 5.3a.5.5 0 0 0-.61.22L2.64 8.84a.5.5 0 0 0 .12.64l2.03 1.58a7.8 7.8 0 0 0-.05.94c0 .32.02.63.05.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.5.39 1.04.7 1.62.94l.37 2.52a.5.5 0 0 0 .49.4h3.84a.5.5 0 0 0 .5-.4l.36-2.52c.59-.24 1.13-.55 1.63-.94l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z"/></svg><span class="state-layer" aria-hidden="true"></span></button>
-<div id="settingsPanel" hidden><label for="language" data-i18n="language">Language</label><select id="language"><option value="fi">Suomi</option><option value="en">English</option></select><label for="theme" data-i18n="theme">Theme</label><select id="theme"><option value="system" data-i18n="system">System</option><option value="light" data-i18n="light">Light</option><option value="dark" data-i18n="dark">Dark</option></select></div>
-</div>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Raksa – etusivu" data-i18n-attr="aria-label:homeLabel">
+      <img data-logo src="assets/logo-light.png" alt="" width="44" height="44">
+      <span><b>RAKSA</b><small data-i18n="subtitle">Rakennuslaskuri</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Päävalikko" data-i18n-attr="aria-label:navLabel">
+      <a href="#tyokalut" data-i18n="navTools">Työkalut</a>
+      <a href="#kaytto" data-i18n="navUses">Käyttö</a>
+      <a href="#kehitys" data-i18n="navRoadmap">Kehitys</a>
+      <a href="privacy.html" data-i18n="navPrivacy">Tietosuoja</a>
+    </nav>
+    <div class="settings">
+      <button id="settingsButton" class="icon-button" type="button" aria-label="Asetukset" data-i18n-attr="aria-label:settings" aria-controls="settingsPanel" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94a7.8 7.8 0 0 0 .05-.94 7.8 7.8 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94L14.38 2.8a.5.5 0 0 0-.5-.4h-3.84a.5.5 0 0 0-.49.4L9.18 5.32c-.58.24-1.12.55-1.62.94L5.17 5.3a.5.5 0 0 0-.61.22L2.64 8.84a.5.5 0 0 0 .12.64l2.03 1.58a7.8 7.8 0 0 0-.05.94c0 .32.02.63.05.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.5.39 1.04.7 1.62.94l.37 2.52a.5.5 0 0 0 .49.4h3.84a.5.5 0 0 0 .5-.4l.36-2.52c.59-.24 1.13-.55 1.63-.94l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z"/></svg>
+      </button>
+      <div id="settingsPanel" class="settings-panel" hidden>
+        <label for="language" data-i18n="language">Kieli</label>
+        <select id="language"><option value="fi">Suomi</option><option value="en">English</option></select>
+        <label for="theme" data-i18n="theme">Teema</label>
+        <select id="theme">
+          <option value="system" data-i18n="themeSystem">Järjestelmä</option>
+          <option value="light" data-i18n="themeLight">Vaalea</option>
+          <option value="dark" data-i18n="themeDark">Tumma</option>
+        </select>
+      </div>
+    </div>
+  </div>
 </header>
+
 <main id="main">
+
 <section class="hero">
-<div><p class="eyebrow" data-i18n="eyebrow">Construction calculation tools</p><h1 data-i18n="title">Clear measurements and layouts on site</h1><p class="lead" data-i18n="lead">Raksa solves missing right-triangle values and produces measurement points for repeating structures. Calculations run on the Android device without a user account.</p>
-<div class="actions"><a class="primary" href="#tools" data-i18n="explore">View the tools</a><a class="secondary" href="privacy.html" data-i18n="privacy">Privacy</a></div>
-<p class="note" data-i18n="offline">Calculations do not require an internet connection.</p></div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" data-i18n="heroEyebrow">Android-sovellus rakentajalle</p>
+      <h1 data-i18n="heroTitle">Kolmiot ja mittajaot <em>oikein työmaalla</em></h1>
+      <p class="lead" data-i18n="heroLead">Raksa laskee suorakulmaisen kolmion puuttuvat mitat ja jakaa rakenteen mittapisteiksi – esimerkiksi runkotolppien, koolausten tai paneelien paikat. Kaikki laskenta tapahtuu puhelimessa.</p>
+      <div class="actions">
+        <a class="button primary" href="#tyokalut" data-i18n="heroPrimary">Tutustu työkaluihin</a>
+        <a class="button secondary" href="privacy.html" data-i18n="heroSecondary">Tietosuoja</a>
+      </div>
+      <ul class="facts">
+        <li data-i18n="fact1">Toimii ilman verkkoyhteyttä</li>
+        <li data-i18n="fact2">Ei käyttäjätiliä</li>
+        <li data-i18n="fact3">Ei mainoksia eikä seurantaa</li>
+        <li data-i18n="fact4">Android 6.0 tai uudempi</li>
+      </ul>
+    </div>
 
-<div class="blueprint" aria-hidden="true"><svg class="triangle-svg" viewBox="0 0 420 400" role="presentation"><path class="triangle-line" d="M80 360 L320 360 L80 40 Z"/><path class="triangle-angle" d="M80 312 H128 V360"/><text class="triangle-label" x="200" y="382">3</text><text class="triangle-label" x="46" y="200">4</text><text class="triangle-label" x="228" y="185">5</text></svg></div>
+    <div class="blueprint" aria-hidden="true">
+      <svg viewBox="0 0 420 420" role="presentation">
+        <path class="bp-dim" d="M60 70 V350 M60 380 H330"/>
+        <path class="bp-line" d="M100 60 V350 H318"/>
+        <path class="bp-hyp" d="M100 60 L318 350"/>
+        <path class="bp-thin" d="M100 318 H132 V350"/>
+        <path class="bp-thin" d="M100 104 A44 44 0 0 0 126.4 95.2"/>
+        <path class="bp-thin" d="M282 350 A36 36 0 0 1 296.4 321.2"/>
+        <text class="bp-text" x="40" y="210" transform="rotate(-90 40 210)">4000</text>
+        <text class="bp-text" x="209" y="400">3000</text>
+        <text class="bp-text hyp" x="238" y="185">5000</text>
+        <text class="bp-text small" x="186" y="98">36,87°</text>
+        <text class="bp-text small" x="362" y="318">53,13°</text>
+      </svg>
+    </div>
+  </div>
 </section>
 
-<section id="tools" class="tools">
-<div class="heading"><p class="eyebrow" data-i18n="now">Current tools</p><h2 data-i18n="tools">Triangle calculator and dimensioning</h2></div>
+<section class="section" id="tyokalut">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="toolsEyebrow">Käytettävissä nyt</p>
+      <h2 data-i18n="toolsTitle">Kaksi työkalua, jotka tekevät yhden asian hyvin</h2>
+      <p data-i18n="toolsLead">Syötä mitat, ja tulos päivittyy heti. Ei laskukaavoja, ei paperia eikä erillistä tallennusnappia.</p>
+    </div>
 
-<article>
-<div><em>01</em><h3 data-i18n="triangleTitle">Triangle calculator</h3><p data-i18n="triangleText">Enter two independent values, including at least one side. Raksa calculates the remaining sides, angles, area and perimeter.</p>
-<ul>
-<li data-i18n="tri1">Two sides, or one side and one angle</li>
+    <article class="tool">
+      <div class="tool-text">
+        <span class="tool-index">01</span>
+        <h3 data-i18n="triTitle">Kolmiolaskin</h3>
+        <p data-i18n="triText">Anna kaksi tunnettua arvoa – kaksi sivua tai sivu ja kulma. Raksa laskee loput sivut, terävät kulmat, pinta-alan ja piirin.</p>
+        <ul class="checklist">
+          <li data-i18n="tri1"><strong>Kateetit a ja b, hypotenuusa c</strong> sekä kulmat α ja β suoraan kolmiokuvassa</li>
+          <li data-i18n="tri2"><strong>Yksiköt mm, cm, dm, m ja km</strong> – yksikön vaihto säilyttää mitan</li>
+          <li data-i18n="tri3"><strong>0–5 desimaalia</strong> tulosten tarkkuudeksi</li>
+          <li data-i18n="tri4"><strong>Selkeät virheilmoitukset</strong>, esimerkiksi jos hypotenuusa on kateettia lyhyempi</li>
+        </ul>
+        <p class="example" data-i18n="triExample">Esimerkki: a = 3000 mm ja b = 4000 mm → c = 5000 mm, α = 36,87° ja β = 53,13°.</p>
+      </div>
+      <figure class="phone">
+        <img data-shot="triangle" src="assets/triangle-light-fi.jpg" width="640" height="1286" loading="lazy" decoding="async" alt="Raksan kolmiolaskin: kolmiokuva, syötetyt sivut ja tuloskortti" data-i18n-attr="alt:triAlt">
+      </figure>
+    </article>
 
-<li data-i18n="tri2">Units from millimetres to kilometres</li>
-
-<li data-i18n="tri3">Results with 0–3 decimal places</li>
-</ul>
-</div>
-<picture class="phone-shot" data-tool="triangle"><img src="assets/triangle-light-fi.jpg" alt="Raksa triangle calculator" data-i18n-alt="triangleAlt"></picture>
-</article>
-
-<article class="reverse">
-<div><em>02</em><h3 data-i18n="dimTitle">Dimensioning</h3><p data-i18n="dimText">Calculate measurement points and material positions from a start, spacing, overall dimension or desired point count.</p>
-<ul>
-<li data-i18n="dim1">Distributed, Dimensioned and Fitted</li>
-
-<li data-i18n="dim2">Material thickness and centering</li>
-
-<li data-i18n="dim3">Point list and copyable result</li>
-</ul>
-</div>
-<picture class="phone-shot" data-tool="dimensions"><img src="assets/dimensions-light-fi.jpg" alt="Raksa dimensioning" data-i18n-alt="dimensionsAlt"></picture>
-</article>
+    <article class="tool reverse">
+      <div class="tool-text">
+        <span class="tool-index">02</span>
+        <h3 data-i18n="dimTitle">Mitoitus</h3>
+        <p data-i18n="dimText">Mitoitus laskee merkintäpisteet toistuville rakenteille, kuten runkotolpille, koolauksille, palkeille ja paneeleille. Valitse laskentatapa, anna mitat ja lue tulos mittaviivalta tai pistelistasta.</p>
+        <div class="modes">
+          <div class="mode" data-i18n="mode1"><b>Jaotettu</b><span>Aloitus, jako ja pisteiden määrä.</span></div>
+          <div class="mode" data-i18n="mode2"><b>Mitoitettu</b><span>Aloitus, jako ja kokonaismitta. Keskitetty-valinta tasaa ylijäävän tilan molempiin päihin.</span></div>
+          <div class="mode" data-i18n="mode3"><b>Sovitettu</b><span>Kokonaismitta jaetaan tasavälein pisteiden määrän, välien määrän tai tavoitejaon mukaan.</span></div>
+        </div>
+        <ul class="checklist">
+          <li data-i18n="dim1"><strong>Materiaalin vahvuus</strong> – pisteet näytetään materiaalin molemmista reunoista</li>
+          <li data-i18n="dim2"><strong>Mittaviiva ja mittapistelista</strong> samasta laskentatuloksesta</li>
+          <li data-i18n="dim3"><strong>Kopioi tulos</strong> leikepöydälle ja lähetä se esimerkiksi viestinä</li>
+        </ul>
+        <p class="example" data-i18n="dimExample">Esimerkki: jako 600 mm ja materiaali 48 mm → piste näkyy muodossa <code>600 mm (648 mm)</code>.</p>
+      </div>
+      <figure class="phone">
+        <img data-shot="dimensions" src="assets/dimensions-light-fi.jpg" width="640" height="1286" loading="lazy" decoding="async" alt="Raksan mitoitus: laskentatavan valinta, syötteet ja tuloskortti" data-i18n-attr="alt:dimAlt">
+      </figure>
+    </article>
+  </div>
 </section>
 
-<section class="future">
-<div><p class="eyebrow" data-i18n="development">Development</p><h2 data-i18n="grow">Raksa grows with purpose</h2><p data-i18n="growText">Areas, volumes, material usage, projects and saved calculations are planned. The site presents only features available in the current app as complete.</p></div>
-<ul>
-<li data-i18n="areas">Areas and volumes</li>
-
-<li data-i18n="materials">Material usage</li>
-
-<li data-i18n="projects">Projects and saved calculations</li>
-</ul>
+<section class="section" id="kaytto">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="usesEyebrow">Käyttötilanteita</p>
+      <h2 data-i18n="usesTitle">Tehty tavallisiin työmaan mittauksiin</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path class="s" d="M8 6v26h26"/><path class="a" d="M8 6l26 26"/><path class="s" d="M8 26h6v6"/></svg>
+        <h3 data-i18n="use1Title">Suorakulmaisuus</h3>
+        <p data-i18n="use1Text">Tarkista nurkka tai perustus 3–4–5-säännöllä ja laske ristimitta mille tahansa sivuparille.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path class="s" d="M4 30L20 10l16 20"/><path class="a" d="M20 10v20M20 30h16"/></svg>
+        <h3 data-i18n="use2Title">Katot ja vinotuet</h3>
+        <p data-i18n="use2Text">Johda kattokaltevuuden nousu ja vaakamitta tai laske vinotuen ja diagonaalin pituus.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path class="s" d="M4 34h32M4 6h32"/><path class="a" d="M8 6v28M18 6v28M28 6v28"/></svg>
+        <h3 data-i18n="use3Title">Runko ja koolaus</h3>
+        <p data-i18n="use3Text">Merkitse tolppien, rimojen ja palkkien paikat k-jaolla, kun kokonaismitta ja materiaalin vahvuus tunnetaan.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path class="s" d="M4 20h32M4 15v10M36 15v10"/><path class="a" d="M12 17v6M20 17v6M28 17v6"/></svg>
+        <h3 data-i18n="use4Title">Tasainen jako</h3>
+        <p data-i18n="use4Text">Sovita paneelit, kaiteen pinnat tai kiinnikkeet tasavälein annettuun mittaan ja keskitä ryhmä tarvittaessa.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="princEyebrow">Periaatteet</p>
+      <h2 data-i18n="princTitle">Yksinkertainen ja yksityinen</h2>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <h3 data-i18n="prin1Title">Toimii ilman verkkoa</h3>
+        <p data-i18n="prin1Text">Kaikki laskenta tapahtuu puhelimessa. Kellarissa tai katolla ei tarvita kuuluvuutta.</p>
+      </div>
+      <div class="principle">
+        <h3 data-i18n="prin2Title">Ei tiliä, ei seurantaa</h3>
+        <p data-i18n="prin2Text">Ei rekisteröitymistä, mainoksia tai analytiikkaa. Sovellus ei pyydä erityisiä käyttöoikeuksia.</p>
+      </div>
+      <div class="principle">
+        <h3 data-i18n="prin3Title">Muistaa asetuksesi</h3>
+        <p data-i18n="prin3Text">Yksiköt, desimaalit, tumma tila ja keskeneräiset laskut säilyvät laitteessa seuraavaan kertaan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="kehitys">
+  <div class="wrap">
+    <div class="roadmap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="roadEyebrow">Kehitys</p>
+        <h2 data-i18n="roadTitle">Mitä on tulossa</h2>
+        <p data-i18n="roadText">Raksaa kehitetään työkalu kerrallaan. Uusi laskuri julkaistaan vasta, kun se on valmis ja testattu. Ideat ja palaute ovat tervetulleita.</p>
+        <div class="actions">
+          <a class="button secondary" href="mailto:Risto.rikalo@gmail.com?subject=Raksa-palaute" data-i18n="roadFeedback">Lähetä palautetta</a>
+        </div>
+      </div>
+      <ul>
+        <li><span data-i18n="road1">Kolmiolaskin</span><span class="badge ready" data-i18n="ready">Käytössä</span></li>
+        <li><span data-i18n="road2">Mitoitus</span><span class="badge ready" data-i18n="ready">Käytössä</span></li>
+        <li><span data-i18n="road3">Pinta-alat ja tilavuudet</span><span class="badge" data-i18n="soon">Tulossa</span></li>
+        <li><span data-i18n="road4">Materiaalimenekit</span><span class="badge" data-i18n="soon">Tulossa</span></li>
+        <li><span data-i18n="road5">Työmaat ja tallennetut laskelmat</span><span class="badge" data-i18n="soon">Tulossa</span></li>
+      </ul>
+    </div>
+
+    <p class="notice">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 7h2v6h-2zm0 8h2v2h-2zm1-13a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
+      <span data-i18n="notice"><strong>Raksa on laskennan apuväline.</strong> Tarkista kriittiset mitat ja rakenteelliset ratkaisut ennen toteutusta.</span>
+    </p>
+  </div>
+</section>
+
 </main>
-<footer><b>RAKSA</b><a href="privacy.html" data-i18n="privacy">Privacy</a><a href="mailto:Risto.rikalo@gmail.com">Risto.rikalo@gmail.com</a><small>© 2026 Risto Lohi</small></footer>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <b>RAKSA</b>
+    <a href="privacy.html" data-i18n="navPrivacy">Tietosuoja</a>
+    <a href="mailto:Risto.rikalo@gmail.com">Risto.rikalo@gmail.com</a>
+    <span>© 2026 Risto Lohi</span>
+  </div>
+</footer>
+
+<script>
+window.RAKSA_EN = {
+  metaTitle: "Raksa – construction calculator for Android",
+  metaDescription: "Raksa is an Android app for right-triangle calculations and construction dimensioning. Works offline, with no user account and no ads.",
+  ogDescription: "Triangle calculator and dimensioning for practical construction work. Works offline.",
+  skip: "Skip to content",
+  homeLabel: "Raksa – home",
+  navLabel: "Main menu",
+  subtitle: "Construction calculator",
+  navTools: "Tools",
+  navUses: "Use cases",
+  navRoadmap: "Roadmap",
+  navPrivacy: "Privacy",
+  settings: "Settings",
+  language: "Language",
+  theme: "Theme",
+  themeSystem: "System",
+  themeLight: "Light",
+  themeDark: "Dark",
+  heroEyebrow: "Android app for builders",
+  heroTitle: "Triangles and spacing, <em>right on site</em>",
+  heroLead: "Raksa solves the missing dimensions of a right triangle and divides a structure into layout points – such as the positions of studs, battens or panels. All calculations run on your phone.",
+  heroPrimary: "Explore the tools",
+  heroSecondary: "Privacy",
+  fact1: "Works offline",
+  fact2: "No user account",
+  fact3: "No ads or tracking",
+  fact4: "Android 6.0 or newer",
+  toolsEyebrow: "Available now",
+  toolsTitle: "Two tools that each do one job well",
+  toolsLead: "Enter your measurements and the result updates instantly. No formulas, no paper and no separate save button.",
+  triTitle: "Triangle calculator",
+  triText: "Enter two known values – two sides, or one side and one angle. Raksa calculates the remaining sides, the acute angles, the area and the perimeter.",
+  tri1: "<strong>Legs a and b, hypotenuse c</strong> and angles α and β right on the diagram",
+  tri2: "<strong>Units mm, cm, dm, m and km</strong> – switching units keeps the measurement",
+  tri3: "<strong>0–5 decimal places</strong> for result precision",
+  tri4: "<strong>Clear error messages</strong>, for example when the hypotenuse is shorter than a leg",
+  triExample: "Example: a = 3000 mm and b = 4000 mm → c = 5000 mm, α = 36.87° and β = 53.13°.",
+  triAlt: "Raksa triangle calculator: triangle diagram, entered sides and result card",
+  dimTitle: "Dimensioning",
+  dimText: "Dimensioning calculates marking points for repeating structures such as studs, battens, joists and panels. Pick a mode, enter the measurements and read the result from the dimension line or the point list.",
+  mode1: "<b>Distributed</b><span>Start, spacing and number of points.</span>",
+  mode2: "<b>Dimensioned</b><span>Start, spacing and overall length. The Centered option splits the leftover space evenly between both ends.</span>",
+  mode3: "<b>Fitted</b><span>The overall length is divided evenly by number of points, number of intervals or a target spacing.</span>",
+  dim1: "<strong>Material thickness</strong> – points are shown for both edges of the material",
+  dim2: "<strong>Dimension line and point list</strong> from the same calculation result",
+  dim3: "<strong>Copy result</strong> to the clipboard and share it, for example in a message",
+  dimExample: "Example: spacing 600 mm and 48 mm material → the point is shown as <code>600 mm (648 mm)</code>.",
+  dimAlt: "Raksa dimensioning: mode selection, inputs and result card",
+  usesEyebrow: "Use cases",
+  usesTitle: "Made for everyday site measurements",
+  use1Title: "Checking square",
+  use1Text: "Check a corner or foundation with the 3–4–5 rule and calculate the diagonal for any pair of sides.",
+  use2Title: "Roofs and bracing",
+  use2Text: "Work out roof rise and run, or calculate the length of a brace or diagonal.",
+  use3Title: "Framing and battens",
+  use3Text: "Mark stud, batten and joist positions at a fixed spacing when the overall length and material thickness are known.",
+  use4Title: "Even spacing",
+  use4Text: "Fit panels, balusters or fixings evenly into a given length and center the group when needed.",
+  princEyebrow: "Principles",
+  princTitle: "Simple and private",
+  prin1Title: "Works offline",
+  prin1Text: "All calculations happen on the phone. No signal needed in a basement or on a roof.",
+  prin2Title: "No account, no tracking",
+  prin2Text: "No sign-up, ads or analytics. The app does not request any special permissions.",
+  prin3Title: "Remembers your settings",
+  prin3Text: "Units, decimals, dark mode and unfinished calculations are kept on the device for next time.",
+  roadEyebrow: "Roadmap",
+  roadTitle: "What's coming next",
+  roadText: "Raksa is developed one tool at a time. A new calculator is released only when it is finished and tested. Ideas and feedback are welcome.",
+  roadFeedback: "Send feedback",
+  road1: "Triangle calculator",
+  road2: "Dimensioning",
+  road3: "Areas and volumes",
+  road4: "Material estimates",
+  road5: "Projects and saved calculations",
+  ready: "Available",
+  soon: "Coming",
+  notice: "<strong>Raksa is a calculation aid.</strong> Verify critical measurements and structural decisions before building."
+};
+</script>
+<script src="site.js?v=20"></script>
 </body>
 </html>
