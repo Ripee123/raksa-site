@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script>(function(){var r=document.documentElement,t,l;try{t=localStorage.getItem('raksa-theme');l=localStorage.getItem('raksa-language')}catch(e){}if(t!=='light'&&t!=='dark')t='system';if(l!=='fi'&&l!=='en'){l=(navigator.languages||[navigator.language||'']).some(function(x){return /^fi(\b|-)/i.test(x)})?'fi':'en'}r.dataset.theme=t;r.dataset.resolvedTheme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;r.lang=l})();</script>
 <title>Raksa | Rakennuslaskuri</title>
-<meta name="description" content="Raksa on Android-sovellus suorakulmaisen kolmion laskentaan ja rakennustyön mitoitukseen. Toimii ilman verkkoyhteyttä ja käyttäjätiliä." data-i18n-content="pageDescription">
+<meta name="description" content="Raksa on Android-sovellus suorakulmaisen kolmion laskentaan ja rakennustyön mitoitukseen. Laskimet toimivat ilman verkkoyhteyttä ja käyttäjätiliä." data-i18n-content="pageDescription">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F5F2EC">
 <link rel="canonical" href="https://www.rikalo.fi/raksa/">
@@ -13,11 +13,11 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=19">
+<link rel="stylesheet" href="style.css?v=20">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Raksa">
 <meta property="og:title" content="Raksa | Rakennuslaskuri" data-i18n-content="pageTitle">
-<meta property="og:description" content="Kolmiolaskin ja mitoitus rakennustyön käytännön tilanteisiin. Toimii ilman verkkoyhteyttä." data-i18n-content="ogDescription">
+<meta property="og:description" content="Kolmiolaskin ja mitoitus rakennustyön käytännön tilanteisiin. Laskimet toimivat ilman verkkoyhteyttä." data-i18n-content="ogDescription">
 <meta property="og:url" content="https://www.rikalo.fi/raksa/">
 <meta property="og:image" content="https://www.rikalo.fi/raksa/assets/social-preview.png">
 <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
 <meta property="og:locale" content="fi_FI">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<script src="site.js?v=19" defer></script>
+<script src="site.js?v=20" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
@@ -53,10 +53,11 @@
       <h1 data-i18n="title">Mitat ja jaot selkeästi työmaalla</h1>
       <p class="lead" data-i18n="lead">Raksa ratkaisee suorakulmaisen kolmion ja laskee mittapisteet toistuville rakenteille, kuten tolppajaolle ja rimoitukselle. Laskenta tapahtuu laitteessa ilman verkkoyhteyttä ja käyttäjätiliä.</p>
       <div class="actions">
-        <a class="button primary" href="#tools" data-i18n="explore">Katso työkalut</a>
+        <span class="button play-pending" data-play-store><svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg><span data-i18n="playComing">Tulossa Google Playhin</span></span>
+        <a class="button secondary" href="#tools" data-i18n="explore">Katso työkalut</a>
         <a class="button secondary" href="privacy.html" data-i18n="privacy">Tietosuoja</a>
       </div>
-      <p class="status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="status">Kehitysversio 1.2.806 · Ei vielä saatavilla Google Playssa</span></p>
+      <p class="status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="status">Versio 1.2.820 · Android 8.0 tai uudempi</span></p>
     </div>
   </section>
 
@@ -105,10 +106,11 @@
       <h2 id="featuresTitle" data-i18n="featuresTitle">Tehty käytännön työhön</h2>
     </div>
     <ul class="feature-grid">
-      <li><h3 data-i18n="f1Title">Ilman verkkoyhteyttä</h3><p data-i18n="f1Text">Laskenta tapahtuu laitteessa. Sovellus ei tarvitse käyttäjätiliä eikä pyydä Android-käyttöoikeuksia.</p></li>
+      <li><h3 data-i18n="f1Title">Laskimet ilman verkkoyhteyttä</h3><p data-i18n="f1Text">Laskenta tapahtuu laitteessa, eikä sovellus tarvitse käyttäjätiliä. Verkkoa tarvitaan vain automaattisesti käännetyn kielen käyttöönottoon.</p></li>
       <li><h3 data-i18n="f2Title">Kopioi ja jaa</h3><p data-i18n="f2Text">Tulosarvon napautus kopioi luvun. Jakopainike lähettää tulokset kuvana Androidin jakovalikon kautta.</p></li>
       <li><h3 data-i18n="f3Title">Tallentuu automaattisesti</h3><p data-i18n="f3Text">Arvot ja asetukset ovat tallessa, kun avaat sovelluksen uudelleen. Tyhjennyksen voi perua.</p></li>
-      <li><h3 data-i18n="f4Title">Omat asetukset</h3><p data-i18n="f4Text">Yksiköt millimetreistä kilometreihin, 0–3 desimaalia, suomi tai englanti sekä järjestelmän, vaalea tai tumma teema.</p></li>
+      <li><h3 data-i18n="f4Title">Omat asetukset</h3><p data-i18n="f4Text">Yksiköt millimetreistä kilometreihin, 0–3 desimaalia sekä järjestelmän, vaalea tai tumma teema.</p></li>
+      <li><h3 data-i18n="f5Title">Kielet</h3><p data-i18n="f5Text">Suomi ja englanti ovat sovelluksen omia käännöksiä. Yli 50 muuta kieltä käännetään automaattisesti laitteessa Google ML Kitillä, ja käännökset voivat olla epätarkkoja.</p></li>
     </ul>
   </section>
 
@@ -136,7 +138,7 @@
     <a href="privacy.html" data-i18n="privacy">Tietosuoja</a>
     <a href="privacy.html#yhteystiedot" data-contact-link data-i18n="contact">Yhteystiedot</a>
   </nav>
-  <small><span data-i18n="version">Versio 1.2.806</span> · © 2026 Raksa</small>
+  <small><span data-i18n="version">Versio 1.2.820</span> · © 2026 Raksa</small>
 </footer>
 </body>
 </html>

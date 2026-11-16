@@ -136,6 +136,8 @@ html[lang="fi"] [data-lang="en"], html[lang="en"] [data-lang="fi"] { display: no
 .primary { color: var(--on-accent); background: var(--accent); box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 24%, transparent); }
 .primary:hover { box-shadow: 0 12px 28px color-mix(in srgb, var(--accent) 32%, transparent); }
 .secondary { border: 1px solid var(--border); }
+.play-icon { flex: none; width: 18px; height: 18px; margin-right: 10px; fill: currentColor; }
+.play-pending { color: var(--muted); background: var(--surface-2); border: 1px dashed var(--border); cursor: default; }
 .secondary:hover { background: color-mix(in srgb, var(--accent) 7%, transparent); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
 
 /* Hero */
@@ -166,7 +168,7 @@ html[lang="fi"] [data-lang="en"], html[lang="en"] [data-lang="fi"] { display: no
 .phone-shot img { display: block; width: 100%; }
 
 .features { padding: 48px 0; }
-.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
 .feature-grid li { padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
 .feature-grid h3 { margin: 0 0 .5em; font-size: 1.15rem; }
 .feature-grid p { margin: 0; color: var(--muted); font-size: .95rem; }
@@ -206,9 +208,6 @@ html[lang="fi"] [data-lang="en"], html[lang="en"] [data-lang="fi"] { display: no
 .site-footer a:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
 
 /* Responsive */
-@media (max-width: 960px) {
-  .feature-grid { grid-template-columns: repeat(2, 1fr); }
-}
 @media (max-width: 800px) {
   .site-header { height: 68px; }
   .brand-mark { width: 48px; height: 48px; }
@@ -227,7 +226,6 @@ html[lang="fi"] [data-lang="en"], html[lang="en"] [data-lang="fi"] { display: no
   .brand small { font-size: .74rem; }
   .hero h1 { font-size: 2.5rem; }
   .tool { padding: 20px; border-radius: 22px; }
-  .feature-grid { grid-template-columns: 1fr; }
 }
 @media (hover: none) {
   .primary:hover, .secondary:hover { box-shadow: none; }

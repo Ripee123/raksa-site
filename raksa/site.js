@@ -2,20 +2,25 @@
 (() => {
   'use strict';
 
+  /* Google Play store listing. Set the final URL here once the app is published;
+     until then the home page shows a neutral "Coming to Google Play" state. */
+  const PLAY_STORE_URL = '';
+
   const STRINGS = {
     fi: {
       skip: 'Siirry sisältöön', subtitle: 'Rakennuslaskuri', settings: 'Asetukset', language: 'Kieli', theme: 'Teema',
       system: 'Järjestelmä', light: 'Vaalea', dark: 'Tumma', privacy: 'Tietosuoja', home: 'Etusivu', contact: 'Yhteystiedot', footerNav: 'Alatunniste',
-      version: 'Versio 1.2.806',
+      version: 'Versio 1.2.820',
       pageTitle: 'Raksa | Rakennuslaskuri',
-      pageDescription: 'Raksa on Android-sovellus suorakulmaisen kolmion laskentaan ja rakennustyön mitoitukseen. Toimii ilman verkkoyhteyttä ja käyttäjätiliä.',
-      ogDescription: 'Kolmiolaskin ja mitoitus rakennustyön käytännön tilanteisiin. Toimii ilman verkkoyhteyttä.',
+      pageDescription: 'Raksa on Android-sovellus suorakulmaisen kolmion laskentaan ja rakennustyön mitoitukseen. Laskimet toimivat ilman verkkoyhteyttä ja käyttäjätiliä.',
+      ogDescription: 'Kolmiolaskin ja mitoitus rakennustyön käytännön tilanteisiin. Laskimet toimivat ilman verkkoyhteyttä.',
       ogImageAlt: 'Raksa-rakennuslaskurin logo ja mitoitusnäkymä',
       eyebrow: 'Android-sovellus rakentamiseen',
       title: 'Mitat ja jaot selkeästi työmaalla',
       lead: 'Raksa ratkaisee suorakulmaisen kolmion ja laskee mittapisteet toistuville rakenteille, kuten tolppajaolle ja rimoitukselle. Laskenta tapahtuu laitteessa ilman verkkoyhteyttä ja käyttäjätiliä.',
       explore: 'Katso työkalut',
-      status: 'Kehitysversio 1.2.806 · Ei vielä saatavilla Google Playssa',
+      status: 'Versio 1.2.820 · Android 8.0 tai uudempi',
+      playComing: 'Tulossa Google Playhin', playGet: 'Lataa Google Playsta',
       toolsEyebrow: 'Työkalut', toolsTitle: 'Kolmiolaskin ja mitoitus',
       triangleTitle: 'Kolmiolaskin',
       triangleText: 'Anna kaksi arvoa, joista ainakin toinen on sivu. Raksa laskee muut sivut, kulmat, pinta-alan, piirin ja kaltevuuden jo kirjoittaessasi.',
@@ -30,14 +35,16 @@
       dim3: 'Materiaalivahvuus, zoomattava mittajana koko näytön tilassa ja mittapistelista',
       dimensionsAlt: 'Raksan mitoitus: Mitoitettu-tila, mitta 3000 mm, jako 600 mm ja materiaali 48 mm, tuloksena mittajana ja mittapisteet',
       featuresEyebrow: 'Molemmissa laskimissa', featuresTitle: 'Tehty käytännön työhön',
-      f1Title: 'Ilman verkkoyhteyttä',
-      f1Text: 'Laskenta tapahtuu laitteessa. Sovellus ei tarvitse käyttäjätiliä eikä pyydä Android-käyttöoikeuksia.',
+      f1Title: 'Laskimet ilman verkkoyhteyttä',
+      f1Text: 'Laskenta tapahtuu laitteessa, eikä sovellus tarvitse käyttäjätiliä. Verkkoa tarvitaan vain automaattisesti käännetyn kielen käyttöönottoon.',
       f2Title: 'Kopioi ja jaa',
       f2Text: 'Tulosarvon napautus kopioi luvun. Jakopainike lähettää tulokset kuvana Androidin jakovalikon kautta.',
       f3Title: 'Tallentuu automaattisesti',
       f3Text: 'Arvot ja asetukset ovat tallessa, kun avaat sovelluksen uudelleen. Tyhjennyksen voi perua.',
       f4Title: 'Omat asetukset',
-      f4Text: 'Yksiköt millimetreistä kilometreihin, 0–3 desimaalia, suomi tai englanti sekä järjestelmän, vaalea tai tumma teema.',
+      f4Text: 'Yksiköt millimetreistä kilometreihin, 0–3 desimaalia sekä järjestelmän, vaalea tai tumma teema.',
+      f5Title: 'Kielet',
+      f5Text: 'Suomi ja englanti ovat sovelluksen omia käännöksiä. Yli 50 muuta kieltä käännetään automaattisesti laitteessa Google ML Kitillä, ja käännökset voivat olla epätarkkoja.',
       development: 'Kehitys', grow: 'Raksa kasvaa harkitusti',
       growText: 'Seuraavat työkalut näkyvät sovelluksessa jo merkinnällä Tulossa. Tällä sivulla esitellään valmiina vain nykyisen version ominaisuudet.',
       next1: 'Pinta-alat ja tilavuudet', next2: 'Materiaalimenekit', next3: 'Lisää rakentamisen laskureita ja käytännön työkaluja',
@@ -46,21 +53,22 @@
       privacyDescription: 'Raksa-Android-sovelluksen ja raksa-verkkosivun tietosuojaseloste.',
       privacyEyebrow: 'Raksa · Rakennuslaskuri', privacyTitle: 'Tietosuojaseloste',
       privacyLead: 'Raksa-Android-sovelluksen ja tämän verkkosivun tietojen käsittely',
-      metaPackage: 'Pakettitunnus', metaVersion: 'Sovellusversio', metaUpdated: 'Päivitetty', metaUpdatedValue: '15.11.2026'
+      metaPackage: 'Pakettitunnus', metaVersion: 'Sovellusversio', metaUpdated: 'Päivitetty'
     },
     en: {
       skip: 'Skip to content', subtitle: 'Construction calculator', settings: 'Settings', language: 'Language', theme: 'Theme',
       system: 'System', light: 'Light', dark: 'Dark', privacy: 'Privacy', home: 'Home', contact: 'Contact', footerNav: 'Footer',
-      version: 'Version 1.2.806',
+      version: 'Version 1.2.820',
       pageTitle: 'Raksa | Construction calculator',
-      pageDescription: 'Raksa is an Android app for right-triangle calculations and construction dimensioning. Works offline and without a user account.',
-      ogDescription: 'Triangle calculator and dimensioning for practical construction work. Works offline.',
+      pageDescription: 'Raksa is an Android app for right-triangle calculations and construction dimensioning. The calculators work offline and without a user account.',
+      ogDescription: 'Triangle calculator and dimensioning for practical construction work. The calculators work offline.',
       ogImageAlt: 'Raksa construction calculator logo and dimensioning screen',
       eyebrow: 'Android app for construction',
       title: 'Clear measurements and layouts on site',
       lead: 'Raksa solves right triangles and calculates measurement points for repeating structures such as stud and batten spacing. Calculations run on the device, offline and without a user account.',
       explore: 'View the tools',
-      status: 'Development version 1.2.806 · Not yet available on Google Play',
+      status: 'Version 1.2.820 · Android 8.0 or later',
+      playComing: 'Coming to Google Play', playGet: 'Get it on Google Play',
       toolsEyebrow: 'Tools', toolsTitle: 'Triangle calculator and dimensioning',
       triangleTitle: 'Triangle calculator',
       triangleText: 'Enter two values, at least one of them a side. Raksa calculates the remaining sides, angles, area, perimeter and slope ratio as you type.',
@@ -75,14 +83,16 @@
       dim3: 'Material thickness, a zoomable full-screen measurement line and a point listing',
       dimensionsAlt: 'Raksa dimensioning: Dimensioned mode, dimension 3000 mm, spacing 600 mm and material 48 mm, with the measurement line and points',
       featuresEyebrow: 'In both calculators', featuresTitle: 'Built for practical work',
-      f1Title: 'Works offline',
-      f1Text: 'Calculations run on the device. The app needs no user account and requests no Android permissions.',
+      f1Title: 'Calculators work offline',
+      f1Text: 'Calculations run on the device, and the app needs no user account. A network connection is needed only to set up an automatically translated language.',
       f2Title: 'Copy and share',
       f2Text: 'Tap a result value to copy the number. The share button sends the results as an image through the Android share sheet.',
       f3Title: 'Saved automatically',
       f3Text: 'Values and settings are kept when you reopen the app. Clearing can be undone.',
       f4Title: 'Your settings',
-      f4Text: 'Units from millimetres to kilometres, 0–3 decimal places, Finnish or English, and a system, light or dark theme.',
+      f4Text: 'Units from millimetres to kilometres, 0–3 decimal places, and a system, light or dark theme.',
+      f5Title: 'Languages',
+      f5Text: 'Finnish and English are the app\'s own translations. More than 50 other languages are translated automatically on the device with Google ML Kit, and the translations may be inaccurate.',
       development: 'Development', grow: 'Raksa grows with purpose',
       growText: 'The next tools are already shown in the app as Coming soon. This page presents as complete only the features of the current version.',
       next1: 'Areas and volumes', next2: 'Material usage', next3: 'More construction calculators and practical tools',
@@ -91,7 +101,7 @@
       privacyDescription: 'Privacy Policy for the Raksa Android app and this website.',
       privacyEyebrow: 'Raksa · Construction calculator', privacyTitle: 'Privacy Policy',
       privacyLead: 'Data handling in the Raksa Android app and on this website',
-      metaPackage: 'Package name', metaVersion: 'App version', metaUpdated: 'Last updated', metaUpdatedValue: '15 November 2026'
+      metaPackage: 'Package name', metaVersion: 'App version', metaUpdated: 'Last updated'
     }
   };
 
@@ -144,6 +154,10 @@
       const text = copy[el.dataset.i18nContent];
       if (text) el.content = text;
     });
+    document.querySelectorAll('time[datetime]').forEach((el) => {
+      el.textContent = new Intl.DateTimeFormat(root.lang === 'en' ? 'en-GB' : 'fi-FI', { dateStyle: 'long' })
+        .format(new Date(`${el.dateTime}T12:00:00`));
+    });
     document.title = isPrivacy ? copy.privacyPageTitle : copy.pageTitle;
     document.querySelectorAll('[data-contact-link]').forEach((a) => {
       a.hash = root.lang === 'en' ? 'contact' : 'yhteystiedot';
@@ -166,6 +180,19 @@
       link.focus();
     });
   });
+
+  if (PLAY_STORE_URL) {
+    document.querySelectorAll('[data-play-store]').forEach((pending) => {
+      const link = document.createElement('a');
+      link.className = 'button primary play-link';
+      link.href = PLAY_STORE_URL;
+      link.rel = 'noopener';
+      const label = pending.querySelector('[data-i18n]');
+      label.dataset.i18n = 'playGet';
+      link.append(...pending.childNodes);
+      pending.replaceWith(link);
+    });
+  }
 
   const themeSelect = document.getElementById('theme');
   const languageSelect = document.getElementById('language');
