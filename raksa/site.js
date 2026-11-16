@@ -9,8 +9,8 @@
   const STRINGS = {
     fi: {
       skip: 'Siirry sisältöön', subtitle: 'Rakennuslaskuri', settings: 'Asetukset', language: 'Kieli', theme: 'Teema',
-      system: 'Järjestelmä', light: 'Vaalea', dark: 'Tumma', privacy: 'Tietosuoja', home: 'Etusivu', contact: 'Yhteystiedot', footerNav: 'Alatunniste',
-      version: 'Versio 1.2.820',
+      system: 'Järjestelmä', light: 'Vaalea', dark: 'Tumma', privacy: 'Tietosuoja', home: 'Etusivu', support: 'Tuki', contact: 'Yhteystiedot', footerNav: 'Alatunniste',
+      version: 'Versio 1.2.821',
       pageTitle: 'Raksa | Rakennuslaskuri',
       pageDescription: 'Raksa on Android-sovellus suorakulmaisen kolmion laskentaan ja rakennustyön mitoitukseen. Laskimet toimivat ilman verkkoyhteyttä ja käyttäjätiliä.',
       ogDescription: 'Kolmiolaskin ja mitoitus rakennustyön käytännön tilanteisiin. Laskimet toimivat ilman verkkoyhteyttä.',
@@ -19,7 +19,7 @@
       title: 'Mitat ja jaot selkeästi työmaalla',
       lead: 'Raksa ratkaisee suorakulmaisen kolmion ja laskee mittapisteet toistuville rakenteille, kuten tolppajaolle ja rimoitukselle. Laskenta tapahtuu laitteessa ilman verkkoyhteyttä ja käyttäjätiliä.',
       explore: 'Katso työkalut',
-      status: 'Versio 1.2.820 · Android 8.0 tai uudempi',
+      status: 'Versio 1.2.821 · Android 8.0 tai uudempi',
       playComing: 'Tulossa Google Playhin', playGet: 'Lataa Google Playsta',
       toolsEyebrow: 'Työkalut', toolsTitle: 'Kolmiolaskin ja mitoitus',
       triangleTitle: 'Kolmiolaskin',
@@ -53,12 +53,16 @@
       privacyDescription: 'Raksa-Android-sovelluksen ja raksa-verkkosivun tietosuojaseloste.',
       privacyEyebrow: 'Raksa · Rakennuslaskuri', privacyTitle: 'Tietosuojaseloste',
       privacyLead: 'Raksa-Android-sovelluksen ja tämän verkkosivun tietojen käsittely',
-      metaPackage: 'Pakettitunnus', metaVersion: 'Sovellusversio', metaUpdated: 'Päivitetty'
+      metaPackage: 'Pakettitunnus', metaVersion: 'Sovellusversio', metaUpdated: 'Päivitetty',
+      supportPageTitle: 'Raksa | Tuki ja palaute',
+      supportDescription: 'Raksa-sovelluksen tuki: ongelmaraportin sisältö, yhteystiedot, sovelluksen tietojen tyhjentäminen ja käyttöohjeita.',
+      supportEyebrow: 'Raksa · Rakennuslaskuri', supportTitle: 'Tuki ja palaute',
+      supportLead: 'Näin saat apua Raksan käyttöön ja ilmoitat ongelmasta tai palautteesta.'
     },
     en: {
       skip: 'Skip to content', subtitle: 'Construction calculator', settings: 'Settings', language: 'Language', theme: 'Theme',
-      system: 'System', light: 'Light', dark: 'Dark', privacy: 'Privacy', home: 'Home', contact: 'Contact', footerNav: 'Footer',
-      version: 'Version 1.2.820',
+      system: 'System', light: 'Light', dark: 'Dark', privacy: 'Privacy', home: 'Home', support: 'Support', contact: 'Contact', footerNav: 'Footer',
+      version: 'Version 1.2.821',
       pageTitle: 'Raksa | Construction calculator',
       pageDescription: 'Raksa is an Android app for right-triangle calculations and construction dimensioning. The calculators work offline and without a user account.',
       ogDescription: 'Triangle calculator and dimensioning for practical construction work. The calculators work offline.',
@@ -67,7 +71,7 @@
       title: 'Clear measurements and layouts on site',
       lead: 'Raksa solves right triangles and calculates measurement points for repeating structures such as stud and batten spacing. Calculations run on the device, offline and without a user account.',
       explore: 'View the tools',
-      status: 'Version 1.2.820 · Android 8.0 or later',
+      status: 'Version 1.2.821 · Android 8.0 or later',
       playComing: 'Coming to Google Play', playGet: 'Get it on Google Play',
       toolsEyebrow: 'Tools', toolsTitle: 'Triangle calculator and dimensioning',
       triangleTitle: 'Triangle calculator',
@@ -101,13 +105,19 @@
       privacyDescription: 'Privacy Policy for the Raksa Android app and this website.',
       privacyEyebrow: 'Raksa · Construction calculator', privacyTitle: 'Privacy Policy',
       privacyLead: 'Data handling in the Raksa Android app and on this website',
-      metaPackage: 'Package name', metaVersion: 'App version', metaUpdated: 'Last updated'
+      metaPackage: 'Package name', metaVersion: 'App version', metaUpdated: 'Last updated',
+      supportPageTitle: 'Raksa | Support and feedback',
+      supportDescription: 'Support for the Raksa app: what to include in a problem report, contact details, clearing the app data and usage guidance.',
+      supportEyebrow: 'Raksa · Construction calculator', supportTitle: 'Support and feedback',
+      supportLead: 'How to get help with Raksa and report a problem or send feedback.'
     }
   };
 
   const root = document.documentElement;
   const darkQuery = matchMedia('(prefers-color-scheme: dark)');
-  const isPrivacy = document.body.dataset.page === 'privacy';
+  /* Each page declares itself with <body data-page="…">; the title key follows from it. */
+  const PAGE_TITLE_KEYS = { home: 'pageTitle', privacy: 'privacyPageTitle', support: 'supportPageTitle' };
+  const titleKey = PAGE_TITLE_KEYS[document.body.dataset.page] || PAGE_TITLE_KEYS.home;
   const store = {
     get(key) { try { return localStorage.getItem(key); } catch { return null; } },
     set(key, value) { try { localStorage.setItem(key, value); } catch { /* storage unavailable */ } }
@@ -158,7 +168,7 @@
       el.textContent = new Intl.DateTimeFormat(root.lang === 'en' ? 'en-GB' : 'fi-FI', { dateStyle: 'long' })
         .format(new Date(`${el.dateTime}T12:00:00`));
     });
-    document.title = isPrivacy ? copy.privacyPageTitle : copy.pageTitle;
+    if (copy[titleKey]) document.title = copy[titleKey];
     document.querySelectorAll('[data-contact-link]').forEach((a) => {
       a.hash = root.lang === 'en' ? 'contact' : 'yhteystiedot';
     });
@@ -173,6 +183,7 @@
     btn.addEventListener('click', () => {
       const address = decode(CONTACT.email);
       const holder = btn.parentElement;
+      if (!holder) return;
       const link = document.createElement('a');
       link.href = `mailto:${address}`;
       link.textContent = address;
@@ -188,7 +199,7 @@
       link.href = PLAY_STORE_URL;
       link.rel = 'noopener';
       const label = pending.querySelector('[data-i18n]');
-      label.dataset.i18n = 'playGet';
+      if (label) label.dataset.i18n = 'playGet';
       link.append(...pending.childNodes);
       pending.replaceWith(link);
     });
@@ -201,20 +212,25 @@
 
   applyTheme(['light', 'dark'].includes(root.dataset.theme) ? root.dataset.theme : 'system', false);
   applyLanguage(root.lang, false);
-  themeSelect.value = root.dataset.theme;
-  languageSelect.value = root.lang;
-
-  themeSelect.addEventListener('change', (e) => applyTheme(e.target.value, true));
-  languageSelect.addEventListener('change', (e) => applyLanguage(e.target.value, true));
+  if (themeSelect) {
+    themeSelect.value = root.dataset.theme;
+    themeSelect.addEventListener('change', (e) => applyTheme(e.target.value, true));
+  }
+  if (languageSelect) {
+    languageSelect.value = root.lang;
+    languageSelect.addEventListener('change', (e) => applyLanguage(e.target.value, true));
+  }
   darkQuery.addEventListener?.('change', () => { if (root.dataset.theme === 'system') applyTheme('system', false); });
 
-  function setPanel(open, returnFocus) {
-    panel.hidden = !open;
-    button.setAttribute('aria-expanded', String(open));
-    if (!open && returnFocus) button.focus();
+  if (button && panel) {
+    const setPanel = (open, returnFocus) => {
+      panel.hidden = !open;
+      button.setAttribute('aria-expanded', String(open));
+      if (!open && returnFocus) button.focus();
+    };
+    button.addEventListener('click', () => setPanel(panel.hidden, false));
+    document.addEventListener('click', (e) => { if (!panel.hidden && !e.target.closest('.settings')) setPanel(false, false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panel.hidden) setPanel(false, true); });
+    addEventListener('pagehide', () => setPanel(false, false));
   }
-  button.addEventListener('click', () => setPanel(panel.hidden, false));
-  document.addEventListener('click', (e) => { if (!panel.hidden && !e.target.closest('.settings')) setPanel(false, false); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panel.hidden) setPanel(false, true); });
-  addEventListener('pagehide', () => setPanel(false, false));
 })();

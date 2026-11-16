@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20">
+<link rel="stylesheet" href="style.css?v=21">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Raksa">
 <meta property="og:title" content="Raksa | Tietosuojaseloste" data-i18n-content="privacyPageTitle">
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://www.rikalo.fi/raksa/privacy.html">
 <meta property="og:image" content="https://www.rikalo.fi/raksa/assets/social-preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<script src="site.js?v=20" defer></script>
+<script src="site.js?v=21" defer></script>
 </head>
 <body data-page="privacy">
 <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
@@ -41,19 +41,19 @@
   </div>
 </header>
 
-<main id="main" class="privacy container-narrow">
-  <div class="privacy-intro">
+<main id="main" class="doc container-narrow">
+  <div class="doc-intro">
     <p class="eyebrow" data-i18n="privacyEyebrow">Raksa · Rakennuslaskuri</p>
     <h1 data-i18n="privacyTitle">Tietosuojaseloste</h1>
     <p class="lead" data-i18n="privacyLead">Raksa-Android-sovelluksen ja tämän verkkosivun tietojen käsittely</p>
     <dl class="privacy-meta">
       <div><dt data-i18n="metaPackage">Pakettitunnus</dt><dd>fi.rikalo.raksa</dd></div>
-      <div><dt data-i18n="metaVersion">Sovellusversio</dt><dd>1.2.820</dd></div>
+      <div><dt data-i18n="metaVersion">Sovellusversio</dt><dd>1.2.821</dd></div>
       <div><dt data-i18n="metaUpdated">Päivitetty</dt><dd><time datetime="2026-11-16">16.11.2026</time></dd></div>
     </dl>
   </div>
 
-  <div class="policy" data-lang="fi" lang="fi">
+  <div class="doc-body" data-lang="fi" lang="fi">
     <section class="summary"><h2>Tiivistelmä</h2><p>Raksan laskimet toimivat laitteessa ilman verkkoyhteyttä ja ilman käyttäjätiliä. Raksa ei lähetä laskenta- tai mittaustietoja laitteen ulkopuolelle, eikä kehittäjällä ole palvelinta. Sovelluksessa ei ole mainontaa, analytiikkaa eikä käyttäjäseurantaa.</p><p>Jos valitset automaattisesti käännetyn kielen, sovellus lataa kielimallin Googlelta Google ML Kit Translation -kirjastolla. Käännös tehdään laitteessa, mutta ML Kit lähettää Googlelle diagnostiikka- ja käyttötietoja kohdan 5 mukaisesti.</p></section>
 
     <section id="yhteystiedot"><h2>1. Rekisterinpitäjä ja yhteystiedot</h2><p>Raksa-sovelluksen tietojen käsittelystä vastaa sovelluksen kehittäjä. Kehittäjän nimi ja sähköpostiosoite tietosuojakysymyksiä varten:</p><p data-contact><button type="button" class="reveal">Näytä yhteystiedot</button></p><p>Verkkosivu: <a href="https://www.rikalo.fi/raksa/">https://www.rikalo.fi/raksa/</a></p><noscript><p>Yhteystiedot näkyvät, kun JavaScript on käytössä.</p></noscript></section>
@@ -68,7 +68,7 @@
 
     <section><h2>6. Kopiointi ja tulosten jakaminen</h2><p>Kun napautat tulosarvoa, Raksa kopioi luvun Androidin leikepöydälle. Leikepöytää hallitsee käyttöjärjestelmä.</p><p>Kun valitset tulosten jakamisen, Raksa piirtää tuloskortista kuvan sovelluksen väliaikaiseen välimuistiin ja avaa Androidin jakovalikon. Kuva siirtyy vain valitsemaasi sovellukseen tai palveluun, ja siihen sovelletaan sen ehtoja. Raksa ei lähetä kuvaa itse.</p></section>
 
-    <section><h2>7. Android-varmuuskopiointi</h2><p>Raksa sallii Androidin varmuuskopioinnin ja laitteensiirron asetuksille, kielivalinnalle ja laskinten tilalle. Jos Android-varmuuskopiointi on käytössä, käyttöjärjestelmä voi siirtää nämä tiedot Googlen hallinnoimaan varmuuskopioon tai uuteen laitteeseen. Käännettyjä tekstejä, ML Kitin kielimallia ja välimuistin tuloskuvaa ei varmuuskopioida. Käyttäjä hallitsee varmuuskopiointia laitteen ja Google-tilin asetuksissa.</p></section>
+    <section><h2>7. Android-varmuuskopiointi</h2><p>Raksa sallii Androidin varmuuskopioinnin ja laitteensiirron asetuksille ja laskinten tilalle. Jos Android-varmuuskopiointi on käytössä, käyttöjärjestelmä voi siirtää nämä tiedot Googlen hallinnoimaan varmuuskopioon tai uuteen laitteeseen. Kielivalintaa, käännettyjä tekstejä, ML Kitin kielimallia ja välimuistin tuloskuvaa ei varmuuskopioida, joten kieli valitaan uudella laitteella uudelleen. Käyttäjä hallitsee varmuuskopiointia laitteen ja Google-tilin asetuksissa.</p></section>
 
     <section><h2>8. Mainonta, analytiikka ja seuranta</h2><p>Sovelluksessa ei ole mainontaa, mainostunnistetta, analytiikkaa, kaatumisraportointia eikä käyttäjäseurantaa. Ainoa ulkopuolinen tiedonsiirto on kohdassa 5 kuvattu ML Kitin diagnostiikka.</p></section>
 
@@ -81,7 +81,7 @@
     <section><h2>12. Muutokset</h2><p>Selostetta päivitetään, jos Raksan ominaisuudet tai tietojen käsittely muuttuvat. Uusin versio julkaistaan tällä sivulla.</p></section>
   </div>
 
-  <div class="policy" data-lang="en" lang="en">
+  <div class="doc-body" data-lang="en" lang="en">
     <section class="summary"><h2>Summary</h2><p>Raksa's calculators work on the device without an internet connection and without a user account. Raksa does not send calculation or measurement data off the device, and the developer operates no server. The app contains no advertising, analytics or user tracking.</p><p>If you choose an automatically translated language, the app downloads a language model from Google using the Google ML Kit Translation library. Translation happens on the device, but ML Kit sends diagnostic and usage data to Google as described in section 5.</p></section>
 
     <section id="contact"><h2>1. Controller and contact</h2><p>The developer of the app is responsible for Raksa's data handling. The developer's name and email address for privacy questions:</p><p data-contact><button type="button" class="reveal">Show contact details</button></p><p>Website: <a href="https://www.rikalo.fi/raksa/">https://www.rikalo.fi/raksa/</a></p><noscript><p>Contact details are shown when JavaScript is enabled.</p></noscript></section>
@@ -96,7 +96,7 @@
 
     <section><h2>6. Copying and sharing results</h2><p>When you tap a result value, Raksa copies the number to the Android clipboard. The clipboard is managed by the operating system.</p><p>When you choose to share results, Raksa draws an image of the result card into the app's temporary cache and opens the Android share sheet. The image goes only to the app or service you choose, and that recipient's terms apply. Raksa does not send the image itself.</p></section>
 
-    <section><h2>7. Android backup</h2><p>Raksa permits Android backup and device transfer for settings, language choice and calculator state. If Android backup is enabled, the operating system may transfer this information to a Google-managed backup or to a new device. Translated texts, the ML Kit language model and the cached result image are not backed up. You manage backup in your device and Google Account settings.</p></section>
+    <section><h2>7. Android backup</h2><p>Raksa permits Android backup and device transfer for settings and calculator state. If Android backup is enabled, the operating system may transfer this information to a Google-managed backup or to a new device. The language choice, translated texts, the ML Kit language model and the cached result image are not backed up, so the language is chosen again on a new device. You manage backup in your device and Google Account settings.</p></section>
 
     <section><h2>8. Advertising, analytics and tracking</h2><p>The app contains no advertising, advertising ID, analytics, crash reporting or user tracking. The only external data transfer is the ML Kit diagnostics described in section 5.</p></section>
 
@@ -114,9 +114,10 @@
   <b>RAKSA</b>
   <nav aria-label="Alatunniste" data-i18n-aria="footerNav">
     <a href="./" data-i18n="home">Etusivu</a>
-    <a href="#yhteystiedot" data-contact-link data-i18n="contact">Yhteystiedot</a>
+    <a href="support.html" data-i18n="support">Tuki</a>
+    <a href="support.html#yhteystiedot" data-contact-link data-i18n="contact">Yhteystiedot</a>
   </nav>
-  <small><span data-i18n="version">Versio 1.2.820</span> · © 2026 Raksa</small>
+  <small><span data-i18n="version">Versio 1.2.821</span> · © 2026 Raksa</small>
 </footer>
 </body>
 </html>

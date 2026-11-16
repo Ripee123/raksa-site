@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fi" data-theme="system">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(function(){var r=document.documentElement,t,l;try{t=localStorage.getItem('raksa-theme');l=localStorage.getItem('raksa-language')}catch(e){}if(t!=='light'&&t!=='dark')t='system';if(l!=='fi'&&l!=='en'){l=(navigator.languages||[navigator.language||'']).some(function(x){return /^fi(\b|-)/i.test(x)})?'fi':'en'}r.dataset.theme=t;r.dataset.resolvedTheme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;r.lang=l})();</script>
+<title>Raksa | Tuki ja palaute</title>
+<meta name="description" content="Raksa-sovelluksen tuki: ongelmaraportin sisältö, yhteystiedot, sovelluksen tietojen tyhjentäminen ja käyttöohjeita." data-i18n-content="supportDescription">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F2EC">
+<link rel="canonical" href="https://www.rikalo.fi/raksa/support.html">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=21">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Raksa">
+<meta property="og:title" content="Raksa | Tuki ja palaute" data-i18n-content="supportPageTitle">
+<meta property="og:description" content="Raksa-sovelluksen tuki: ongelmaraportin sisältö, yhteystiedot, sovelluksen tietojen tyhjentäminen ja käyttöohjeita." data-i18n-content="supportDescription">
+<meta property="og:url" content="https://www.rikalo.fi/raksa/support.html">
+<meta property="og:image" content="https://www.rikalo.fi/raksa/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<script src="site.js?v=21" defer></script>
+</head>
+<body data-page="support">
+<a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
+<header class="site-header">
+  <a class="brand" href="./" aria-label="Raksa">
+    <span class="brand-mark"><img class="brand-logo" src="assets/logo-silver.png" width="96" height="96" alt=""></span>
+    <span><b>RAKSA</b><small data-i18n="subtitle">Rakennuslaskuri</small></span>
+  </a>
+  <div class="settings">
+    <button id="settingsButton" type="button" aria-label="Asetukset" data-i18n-aria="settings" aria-controls="settingsPanel" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94a7.8 7.8 0 0 0 .05-.94 7.8 7.8 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94L14.38 2.8a.5.5 0 0 0-.5-.4h-3.84a.5.5 0 0 0-.49.4L9.18 5.32c-.58.24-1.12.55-1.62.94L5.17 5.3a.5.5 0 0 0-.61.22L2.64 8.84a.5.5 0 0 0 .12.64l2.03 1.58a7.8 7.8 0 0 0-.05.94c0 .32.02.63.05.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.5.39 1.04.7 1.62.94l.37 2.52a.5.5 0 0 0 .49.4h3.84a.5.5 0 0 0 .5-.4l.36-2.52c.59-.24 1.13-.55 1.63-.94l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z"/></svg></button>
+    <div id="settingsPanel" hidden>
+      <label for="language" data-i18n="language">Kieli</label>
+      <select id="language"><option value="fi">Suomi</option><option value="en">English</option></select>
+      <label for="theme" data-i18n="theme">Teema</label>
+      <select id="theme"><option value="system" data-i18n="system">Järjestelmä</option><option value="light" data-i18n="light">Vaalea</option><option value="dark" data-i18n="dark">Tumma</option></select>
+    </div>
+  </div>
+</header>
+
+
+<main id="main" class="doc container-narrow">
+  <div class="doc-intro">
+    <p class="eyebrow" data-i18n="supportEyebrow">Raksa · Rakennuslaskuri</p>
+    <h1 data-i18n="supportTitle">Tuki ja palaute</h1>
+    <p class="lead" data-i18n="supportLead">Näin saat apua Raksan käyttöön ja ilmoitat ongelmasta tai palautteesta.</p>
+  </div>
+
+  <div class="doc-body" data-lang="fi" lang="fi">
+    <section class="summary"><h2>Ennen kuin otat yhteyttä</h2><p>Raksa vaatii Android 8.0:n tai uudemman. Sovelluksen versio näkyy Raksan Tietoja-sivulla. Laskurin Ohje-painikkeesta löytyy tarkempi käyttöohje.</p></section>
+
+    <section><h2>1. Ongelmaraportin sisältö</h2><p>Kun ilmoitat ongelmasta, kerro mahdollisuuksien mukaan:</p><ul><li>Raksa-sovelluksen versio</li><li>Android-versio</li><li>laitteen valmistaja ja malli</li><li>käytetty laskin (Kolmiolaskin tai Mitoitus)</li><li>Mitoituksen päätila (Jaotettu, Mitoitettu tai Sovitettu), jos ongelma liittyy Mitoitukseen</li><li>syötetyt arvot</li><li>odotettu tulos</li><li>todellinen tulos</li><li>vaiheet, joilla ongelman saa toistettua</li><li>kuvakaappaus, jos se ei sisällä arkaluonteisia tietojasi.</li></ul></section>
+
+    <section id="yhteystiedot"><h2>2. Yhteystiedot</h2><p>Lähetä ongelmaraportti tai palaute sähköpostilla:</p><p data-contact><button type="button" class="reveal">Näytä yhteystiedot</button></p><noscript><p>Yhteystiedot näkyvät, kun JavaScript on käytössä.</p></noscript><p>Tietojen käsittely on kuvattu <a href="privacy.html">tietosuojaselosteessa</a>.</p></section>
+
+    <section><h2>3. Sovelluksen tietojen tyhjentäminen</h2><p>Jos sovellus ei toimi odotetusti, voit palauttaa sen alkutilaan tyhjentämällä sen tiedot:</p><ol><li>Avaa laitteen Asetukset.</li><li>Valitse Sovellukset ja sitten Raksa.</li><li>Valitse Tallennustila (tai Tallennustila ja välimuisti).</li><li>Valitse Tyhjennä tallennustila tai Tyhjennä tiedot ja vahvista.</li></ol><p>Valikoiden nimet voivat vaihdella laitteen valmistajan ja Android-version mukaan.</p><div class="callout" role="note"><p><strong>Varoitus:</strong> tietojen tyhjentäminen poistaa pysyvästi paikalliset asetukset ja laskinten tallennetun tilan, kuten syötetyt arvot. Myös kielivalinta, käännetyt tekstit ja ladattu kielimalli poistuvat, ja kieli valitaan uudelleen seuraavalla käynnistyksellä.</p></div></section>
+
+    <section><h2>4. Automaattiset käännökset</h2><p>Suomi ja englanti ovat sovelluksen omia käännöksiä. Muut kielet käännetään automaattisesti Google ML Kitillä, ja käännökset voivat olla epätarkkoja, erityisesti rakennusalan termeissä. Laskenta, tallennetut arvot ja yksiköt eivät riipu kielestä.</p><p>Jos käännös on epäselvä, vaihda kieleksi suomi tai englanti kohdasta Asetukset → Kieli. Jos kielimallin lataus epäonnistuu, tarkista verkkoyhteys ja valitse Yritä uudelleen.</p></section>
+
+    <section><h2>5. Turvallinen käyttö</h2><p>Raksa on laskennan ja mitoituksen apuväline. Tarkista lähtöarvot, tulokset ja kriittiset mitat ennen työn toteuttamista. Käytä tuloksia kohteen suunnitelmien, ohjeiden ja voimassa olevien määräysten mukaisesti.</p></section>
+
+    <section><h2>Linkit</h2><ul><li><a href="./">Raksan etusivu</a></li><li><a href="privacy.html">Tietosuojaseloste</a></li></ul></section>
+  </div>
+
+  <div class="doc-body" data-lang="en" lang="en">
+    <section class="summary"><h2>Before you contact us</h2><p>Raksa requires Android 8.0 or later. The app version is shown on Raksa's About page. Each calculator's Help button opens more detailed instructions.</p></section>
+
+    <section><h2>1. What to include in a problem report</h2><p>When you report a problem, please include where possible:</p><ul><li>the Raksa app version</li><li>the Android version</li><li>the device manufacturer and model</li><li>the calculator used (triangle calculator or dimensioning)</li><li>the dimensioning mode (Distributed, Dimensioned or Fitted), if the problem concerns dimensioning</li><li>the values you entered</li><li>the expected result</li><li>the actual result</li><li>steps to reproduce the problem</li><li>a screenshot, if it does not contain sensitive information.</li></ul></section>
+
+    <section id="contact"><h2>2. Contact</h2><p>Send problem reports and feedback by email:</p><p data-contact><button type="button" class="reveal">Show contact details</button></p><noscript><p>Contact details are shown when JavaScript is enabled.</p></noscript><p>Data handling is described in the <a href="privacy.html">Privacy Policy</a>.</p></section>
+
+    <section><h2>3. Clearing the app's data</h2><p>If the app does not work as expected, you can reset it by clearing its data:</p><ol><li>Open the device Settings.</li><li>Choose Apps, then Raksa.</li><li>Choose Storage (or Storage &amp; cache).</li><li>Choose Clear storage or Clear data and confirm.</li></ol><p>Menu names may vary by device manufacturer and Android version.</p><div class="callout" role="note"><p><strong>Warning:</strong> clearing the data permanently deletes the local settings and the calculators' saved state, such as entered values. The language choice, translated texts and downloaded language model are also removed, and the language is chosen again on the next start.</p></div></section>
+
+    <section><h2>4. Automatic translations</h2><p>Finnish and English are the app's own translations. Other languages are translated automatically with Google ML Kit, and the translations may be inaccurate, especially construction terms. Calculations, saved values and units do not depend on the language.</p><p>If a translation is unclear, switch to Finnish or English in Settings → Language. If the language model download fails, check the network connection and choose Try again.</p></section>
+
+    <section><h2>5. Safe use</h2><p>Raksa is a calculation and dimensioning aid. Check the input values, results and critical dimensions before carrying out the work. Use the results in line with the project's plans, instructions and applicable regulations.</p></section>
+
+    <section><h2>Links</h2><ul><li><a href="./">Raksa home page</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <b>RAKSA</b>
+  <nav aria-label="Alatunniste" data-i18n-aria="footerNav">
+    <a href="./" data-i18n="home">Etusivu</a>
+    <a href="privacy.html" data-i18n="privacy">Tietosuoja</a>
+    <a href="#yhteystiedot" data-contact-link data-i18n="contact">Yhteystiedot</a>
+  </nav>
+  <small><span data-i18n="version">Versio 1.2.821</span> · © 2026 Raksa</small>
+</footer>
+</body>
+</html>
