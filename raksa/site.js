@@ -57,7 +57,10 @@
       supportPageTitle: 'Raksa | Tuki ja palaute',
       supportDescription: 'Raksa-sovelluksen tuki: ongelmaraportin sisältö, yhteystiedot, sovelluksen tietojen tyhjentäminen ja käyttöohjeita.',
       supportEyebrow: 'Raksa · Rakennuslaskuri', supportTitle: 'Tuki ja palaute',
-      supportLead: 'Näin saat apua Raksan käyttöön ja ilmoitat ongelmasta tai palautteesta.'
+      supportLead: 'Näin saat apua Raksan käyttöön ja ilmoitat ongelmasta tai palautteesta.',
+      mainNav: 'Päävalikko', menu: 'Valikko', navBeta: 'Testaus',
+      betaPageTitle: 'Raksa | Beta-testaus',
+      betaDescription: 'Liity Raksan testaajaksi: ohjeet Raksan Google-ryhmään ja Google Playn suljettuun Android-testiin liittymiseen.'
     },
     en: {
       skip: 'Skip to content', subtitle: 'Construction calculator', settings: 'Settings', language: 'Language', theme: 'Theme',
@@ -109,14 +112,17 @@
       supportPageTitle: 'Raksa | Support and feedback',
       supportDescription: 'Support for the Raksa app: what to include in a problem report, contact details, clearing the app data and usage guidance.',
       supportEyebrow: 'Raksa · Construction calculator', supportTitle: 'Support and feedback',
-      supportLead: 'How to get help with Raksa and report a problem or send feedback.'
+      supportLead: 'How to get help with Raksa and report a problem or send feedback.',
+      mainNav: 'Main menu', menu: 'Menu', navBeta: 'Testing',
+      betaPageTitle: 'Raksa | Beta testing',
+      betaDescription: 'Become a Raksa tester: how to join the Raksa Google Group and the closed Android test on Google Play.'
     }
   };
 
   const root = document.documentElement;
   const darkQuery = matchMedia('(prefers-color-scheme: dark)');
   /* Each page declares itself with <body data-page="…">; the title key follows from it. */
-  const PAGE_TITLE_KEYS = { home: 'pageTitle', privacy: 'privacyPageTitle', support: 'supportPageTitle' };
+  const PAGE_TITLE_KEYS = { home: 'pageTitle', privacy: 'privacyPageTitle', support: 'supportPageTitle', beta: 'betaPageTitle' };
   const titleKey = PAGE_TITLE_KEYS[document.body.dataset.page] || PAGE_TITLE_KEYS.home;
   const store = {
     get(key) { try { return localStorage.getItem(key); } catch { return null; } },
@@ -219,15 +225,33 @@
   }
   darkQuery.addEventListener?.('change', () => { if (root.dataset.theme === 'system') applyTheme('system', false); });
 
+  /* Header popups: the settings panel and, on narrow screens, the navigation menu. Only one is open at a time. */
+  const menuButton = document.getElementById('menuButton');
+  const nav = document.getElementById('siteNav');
+  const popups = [];
   if (button && panel) {
-    const setPanel = (open, returnFocus) => {
-      panel.hidden = !open;
-      button.setAttribute('aria-expanded', String(open));
-      if (!open && returnFocus) button.focus();
-    };
-    button.addEventListener('click', () => setPanel(panel.hidden, false));
-    document.addEventListener('click', (e) => { if (!panel.hidden && !e.target.closest('.settings')) setPanel(false, false); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panel.hidden) setPanel(false, true); });
-    addEventListener('pagehide', () => setPanel(false, false));
+    popups.push({ button, isOpen: () => !panel.hidden, set: (open) => { panel.hidden = !open; }, scope: '.settings' });
   }
+  if (menuButton && nav) {
+    popups.push({ button: menuButton, isOpen: () => nav.classList.contains('open'), set: (open) => nav.classList.toggle('open', open), scope: '#siteNav, #menuButton' });
+  }
+  const setPopup = (popup, open, returnFocus) => {
+    popup.set(open);
+    popup.button.setAttribute('aria-expanded', String(open));
+    if (!open && returnFocus) popup.button.focus();
+  };
+  popups.forEach((popup) => {
+    popup.button.addEventListener('click', () => {
+      const open = !popup.isOpen();
+      popups.forEach((other) => { if (other !== popup && other.isOpen()) setPopup(other, false, false); });
+      setPopup(popup, open, false);
+    });
+  });
+  document.addEventListener('click', (e) => {
+    popups.forEach((popup) => { if (popup.isOpen() && !e.target.closest(popup.scope)) setPopup(popup, false, false); });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') popups.forEach((popup) => { if (popup.isOpen()) setPopup(popup, false, true); });
+  });
+  addEventListener('pagehide', () => popups.forEach((popup) => setPopup(popup, false, false)));
 })();

@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=24">
+<link rel="stylesheet" href="style.css?v=25">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Raksa">
 <meta property="og:title" content="Raksa | Tuki ja palaute" data-i18n-content="supportPageTitle">
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://www.rikalo.fi/raksa/support.html">
 <meta property="og:image" content="https://www.rikalo.fi/raksa/assets/social-preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<script src="site.js?v=24" defer></script>
+<script src="site.js?v=25" defer></script>
 </head>
 <body data-page="support">
 <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
@@ -30,13 +30,22 @@
     <span class="brand-mark"><img class="brand-logo" src="assets/logo-silver.png" width="96" height="96" alt=""></span>
     <span><b>RAKSA</b><small data-i18n="subtitle">Rakennuslaskuri</small></span>
   </a>
-  <div class="settings">
-    <button id="settingsButton" type="button" aria-label="Asetukset" data-i18n-aria="settings" aria-controls="settingsPanel" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94a7.8 7.8 0 0 0 .05-.94 7.8 7.8 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94L14.38 2.8a.5.5 0 0 0-.5-.4h-3.84a.5.5 0 0 0-.49.4L9.18 5.32c-.58.24-1.12.55-1.62.94L5.17 5.3a.5.5 0 0 0-.61.22L2.64 8.84a.5.5 0 0 0 .12.64l2.03 1.58a7.8 7.8 0 0 0-.05.94c0 .32.02.63.05.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.5.39 1.04.7 1.62.94l.37 2.52a.5.5 0 0 0 .49.4h3.84a.5.5 0 0 0 .5-.4l.36-2.52c.59-.24 1.13-.55 1.63-.94l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z"/></svg></button>
-    <div id="settingsPanel" hidden>
-      <label for="language" data-i18n="language">Kieli</label>
-      <select id="language"><option value="fi">Suomi</option><option value="en">English</option></select>
-      <label for="theme" data-i18n="theme">Teema</label>
-      <select id="theme"><option value="system" data-i18n="system">Järjestelmä</option><option value="light" data-i18n="light">Vaalea</option><option value="dark" data-i18n="dark">Tumma</option></select>
+  <nav class="site-nav" id="siteNav" aria-label="Päävalikko" data-i18n-aria="mainNav">
+    <a href="./" data-i18n="home">Etusivu</a>
+    <a href="beta" data-i18n="navBeta">Testaus</a>
+    <a href="support.html" data-i18n="support" aria-current="page">Tuki</a>
+    <a href="privacy.html" data-i18n="privacy">Tietosuoja</a>
+  </nav>
+  <div class="header-actions">
+    <button id="menuButton" type="button" aria-label="Valikko" data-i18n-aria="menu" aria-controls="siteNav" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v2H4zm0 4.5h16v2H4zm0 4.5h16v2H4z"/></svg></button>
+    <div class="settings">
+      <button id="settingsButton" type="button" aria-label="Asetukset" data-i18n-aria="settings" aria-controls="settingsPanel" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94a7.8 7.8 0 0 0 .05-.94 7.8 7.8 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94L14.38 2.8a.5.5 0 0 0-.5-.4h-3.84a.5.5 0 0 0-.49.4L9.18 5.32c-.58.24-1.12.55-1.62.94L5.17 5.3a.5.5 0 0 0-.61.22L2.64 8.84a.5.5 0 0 0 .12.64l2.03 1.58a7.8 7.8 0 0 0-.05.94c0 .32.02.63.05.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.5.39 1.04.7 1.62.94l.37 2.52a.5.5 0 0 0 .49.4h3.84a.5.5 0 0 0 .5-.4l.36-2.52c.59-.24 1.13-.55 1.63-.94l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z"/></svg></button>
+      <div id="settingsPanel" hidden>
+        <label for="language" data-i18n="language">Kieli</label>
+        <select id="language"><option value="fi">Suomi</option><option value="en">English</option></select>
+        <label for="theme" data-i18n="theme">Teema</label>
+        <select id="theme"><option value="system" data-i18n="system">Järjestelmä</option><option value="light" data-i18n="light">Vaalea</option><option value="dark" data-i18n="dark">Tumma</option></select>
+      </div>
     </div>
   </div>
 </header>

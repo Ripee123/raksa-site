@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=24">
+<link rel="stylesheet" href="style.css?v=25">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Raksa">
 <meta property="og:title" content="Raksa | Rakennuslaskuri" data-i18n-content="pageTitle">
@@ -26,7 +26,7 @@
 <meta property="og:locale" content="fi_FI">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<script src="site.js?v=24" defer></script>
+<script src="site.js?v=25" defer></script>
 </head>
 <body data-page="home">
 <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
@@ -35,13 +35,22 @@
     <span class="brand-mark"><img class="brand-logo" src="assets/logo-silver.png" width="96" height="96" alt=""></span>
     <span><b>RAKSA</b><small data-i18n="subtitle">Rakennuslaskuri</small></span>
   </a>
-  <div class="settings">
-    <button id="settingsButton" type="button" aria-label="Asetukset" data-i18n-aria="settings" aria-controls="settingsPanel" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94a7.8 7.8 0 0 0 .05-.94 7.8 7.8 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94L14.38 2.8a.5.5 0 0 0-.5-.4h-3.84a.5.5 0 0 0-.49.4L9.18 5.32c-.58.24-1.12.55-1.62.94L5.17 5.3a.5.5 0 0 0-.61.22L2.64 8.84a.5.5 0 0 0 .12.64l2.03 1.58a7.8 7.8 0 0 0-.05.94c0 .32.02.63.05.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.5.39 1.04.7 1.62.94l.37 2.52a.5.5 0 0 0 .49.4h3.84a.5.5 0 0 0 .5-.4l.36-2.52c.59-.24 1.13-.55 1.63-.94l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z"/></svg></button>
-    <div id="settingsPanel" hidden>
-      <label for="language" data-i18n="language">Kieli</label>
-      <select id="language"><option value="fi">Suomi</option><option value="en">English</option></select>
-      <label for="theme" data-i18n="theme">Teema</label>
-      <select id="theme"><option value="system" data-i18n="system">Järjestelmä</option><option value="light" data-i18n="light">Vaalea</option><option value="dark" data-i18n="dark">Tumma</option></select>
+  <nav class="site-nav" id="siteNav" aria-label="Päävalikko" data-i18n-aria="mainNav">
+    <a href="./" data-i18n="home" aria-current="page">Etusivu</a>
+    <a href="beta" data-i18n="navBeta">Testaus</a>
+    <a href="support.html" data-i18n="support">Tuki</a>
+    <a href="privacy.html" data-i18n="privacy">Tietosuoja</a>
+  </nav>
+  <div class="header-actions">
+    <button id="menuButton" type="button" aria-label="Valikko" data-i18n-aria="menu" aria-controls="siteNav" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v2H4zm0 4.5h16v2H4zm0 4.5h16v2H4z"/></svg></button>
+    <div class="settings">
+      <button id="settingsButton" type="button" aria-label="Asetukset" data-i18n-aria="settings" aria-controls="settingsPanel" aria-expanded="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94a7.8 7.8 0 0 0 .05-.94 7.8 7.8 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94L14.38 2.8a.5.5 0 0 0-.5-.4h-3.84a.5.5 0 0 0-.49.4L9.18 5.32c-.58.24-1.12.55-1.62.94L5.17 5.3a.5.5 0 0 0-.61.22L2.64 8.84a.5.5 0 0 0 .12.64l2.03 1.58a7.8 7.8 0 0 0-.05.94c0 .32.02.63.05.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.5.39 1.04.7 1.62.94l.37 2.52a.5.5 0 0 0 .49.4h3.84a.5.5 0 0 0 .5-.4l.36-2.52c.59-.24 1.13-.55 1.63-.94l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z"/></svg></button>
+      <div id="settingsPanel" hidden>
+        <label for="language" data-i18n="language">Kieli</label>
+        <select id="language"><option value="fi">Suomi</option><option value="en">English</option></select>
+        <label for="theme" data-i18n="theme">Teema</label>
+        <select id="theme"><option value="system" data-i18n="system">Järjestelmä</option><option value="light" data-i18n="light">Vaalea</option><option value="dark" data-i18n="dark">Tumma</option></select>
+      </div>
     </div>
   </div>
 </header>
@@ -54,7 +63,7 @@
       <p class="lead" data-i18n="lead">Raksa ratkaisee suorakulmaisen kolmion ja laskee mittapisteet toistuville rakenteille, kuten tolppajaolle ja rimoitukselle. Laskimet toimivat ilman verkkoyhteyttä ja käyttäjätiliä.</p>
       <div class="actions">
         <span class="button play-pending" data-play-store><svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg><span data-i18n="playComing">Tulossa Google Playhin</span></span>
-        <a class="button primary" href="#testaus" data-i18n="joinTest">Liity testaajaksi</a>
+        <a class="button primary" href="beta" data-i18n="joinTest">Liity testaajaksi</a>
         <a class="button secondary" href="#tools" data-i18n="explore">Katso työkalut</a>
       </div>
       <p class="status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="status">Android 8.0 tai uudempi</span></p>
@@ -98,98 +107,6 @@
         <img data-shot="dimensions" src="assets/screens/dimensions-light-fi.webp" width="588" height="1350" loading="lazy" decoding="async" alt="Raksan mitoitus: Mitoitettu-tila, mitta 3000 mm, jako 600 mm ja materiaali 48 mm, tuloksena mittajana ja mittapisteet" data-i18n-alt="dimensionsAlt">
       </figure>
     </article>
-  </section>
-
-  <section id="testaus" class="testing container">
-    <div data-lang="fi" lang="fi">
-      <div class="section-heading">
-        <p class="eyebrow">Testaus</p>
-        <h2>Liity Raksan testaajaksi</h2>
-        <p class="lead">Raksa on saatavilla suljettuun Android-testaukseen. Testaajaksi liittyminen tapahtuu kahdessa vaiheessa.</p>
-        <p class="testing-note">Käytä molemmissa vaiheissa samaa Google-tiliä, jota käytät Android-laitteesi Google Play Kaupassa.</p>
-      </div>
-      <ol class="join-steps">
-        <li>
-          <span class="step-number" aria-hidden="true">1</span>
-          <h3>Liity Raksan testaajaryhmään</h3>
-          <p>Liity ensin Raksan Google-ryhmään. Ryhmän jäsenyys antaa Google-tilillesi oikeuden liittyä sovelluksen suljettuun testiin.</p>
-          <a class="button primary" href="https://groups.google.com/g/raksa-testaus" target="_blank" rel="noopener">Liity testaajaryhmään</a>
-        </li>
-        <li>
-          <span class="step-number" aria-hidden="true">2</span>
-          <h3>Liity Google Play&nbsp;-testiin</h3>
-          <p>Kun olet liittynyt Google-ryhmään, avaa Raksan testiohjelma samalla Google-tilillä. Valitse Google Playn sivulla <strong>Liity testaajaksi</strong>. Tämän jälkeen saat sovelluksen asennettavaksi Google Play Kaupasta.</p>
-          <a class="button primary" href="https://play.google.com/apps/testing/fi.rikalo.raksa" target="_blank" rel="noopener">Liity Google Play&nbsp;-testiin</a>
-        </li>
-      </ol>
-      <div class="testing-info">
-        <div>
-          <h3>Testijakson aikana</h3>
-          <ul>
-            <li>Pysy Google-ryhmän ja Google Play&nbsp;-testiohjelman jäsenenä vähintään 14 päivää.</li>
-            <li>Käytä sovellusta testijakson aikana.</li>
-            <li>Kokeile erityisesti Mitoitusta ja Kolmiolaskinta.</li>
-            <li>Ilmoita havaitsemistasi virheistä, epäselvyyksistä ja parannusehdotuksista Raksan palautesivulla.</li>
-          </ul>
-          <a class="button secondary" href="support.html">Anna palautetta</a>
-        </div>
-        <div>
-          <h3>Jos sovellus ei ole saatavilla</h3>
-          <p>Jos Google Play näyttää ilmoituksen <strong>App not available</strong>, tarkista seuraavat asiat:</p>
-          <ol>
-            <li>Olet liittynyt ensin Raksan Google-ryhmään.</li>
-            <li>Google-ryhmään ja Google Play&nbsp;-testiin on kirjauduttu samalla Google-tilillä.</li>
-            <li>Sama Google-tili on käytössä Android-laitteen Google Play Kaupassa.</li>
-            <li>Ryhmään liittymisen jälkeen testilinkki on avattu uudelleen.</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div data-lang="en" lang="en">
-      <div class="section-heading">
-        <p class="eyebrow">Testing</p>
-        <h2>Become a Raksa tester</h2>
-        <p class="lead">Raksa is available for closed Android testing. Joining as a tester takes two steps.</p>
-        <p class="testing-note">Use the same Google Account in both steps that you use in the Google Play Store on your Android device.</p>
-      </div>
-      <ol class="join-steps">
-        <li>
-          <span class="step-number" aria-hidden="true">1</span>
-          <h3>Join the Raksa tester group</h3>
-          <p>First join the Raksa Google Group. Group membership gives your Google Account access to the app's closed test.</p>
-          <a class="button primary" href="https://groups.google.com/g/raksa-testaus" target="_blank" rel="noopener">Join the tester group</a>
-        </li>
-        <li>
-          <span class="step-number" aria-hidden="true">2</span>
-          <h3>Join the Google Play test</h3>
-          <p>Once you have joined the Google Group, open the Raksa testing program with the same Google Account. On the Google Play page, choose <strong>Become a tester</strong>. You can then install the app from the Google Play Store.</p>
-          <a class="button primary" href="https://play.google.com/apps/testing/fi.rikalo.raksa" target="_blank" rel="noopener">Join the Google Play test</a>
-        </li>
-      </ol>
-      <div class="testing-info">
-        <div>
-          <h3>During the test period</h3>
-          <ul>
-            <li>Stay a member of the Google Group and the Google Play testing program for at least 14 days.</li>
-            <li>Use the app during the test period.</li>
-            <li>In particular, try Dimensioning and the Triangle calculator.</li>
-            <li>Report any bugs, unclear points and suggestions for improvement on the Raksa feedback page.</li>
-          </ul>
-          <a class="button secondary" href="support.html">Give feedback</a>
-        </div>
-        <div>
-          <h3>If the app is not available</h3>
-          <p>If Google Play shows the message <strong>App not available</strong>, check the following:</p>
-          <ol>
-            <li>You joined the Raksa Google Group first.</li>
-            <li>You signed in to the Google Group and the Google Play test with the same Google Account.</li>
-            <li>The same Google Account is used in the Google Play Store on your Android device.</li>
-            <li>You opened the testing link again after joining the group.</li>
-          </ol>
-        </div>
-      </div>
-    </div>
   </section>
 
   <section class="features container" aria-labelledby="featuresTitle">
