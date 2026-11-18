@@ -179,9 +179,10 @@
     refreshImages();
   }
 
-  /* Contact details are kept out of the HTML source to reduce scraping; they are decoded only in the browser. */
+  /* Contact details are kept out of the HTML source to reduce scraping; they are decoded only in the browser.
+     The developer's name is shown only where it is required: as the controller in the privacy policy. */
   const decode = (value) => [...atob(value)].reverse().join('');
-  const CONTACT = { name: 'aWhvTCBvdHNpUg==', email: 'bW9jLmxpYW1nQG9sYWtpci5vdHNpUg==' };
+  const CONTACT = { name: 'aWhvTCBvdHNpUg==', email: 'bW9jLmxpYW1nQG9sYWtpci5pa3V0' };
   document.querySelectorAll('[data-contact] .reveal').forEach((btn) => {
     btn.addEventListener('click', () => {
       const address = decode(CONTACT.email);
@@ -190,7 +191,8 @@
       const link = document.createElement('a');
       link.href = `mailto:${address}`;
       link.textContent = address;
-      holder.replaceChildren(document.createTextNode(`${decode(CONTACT.name)} · `), link);
+      if (holder.dataset.contact === 'controller') holder.replaceChildren(document.createTextNode(`${decode(CONTACT.name)} · `), link);
+      else holder.replaceChildren(link);
       link.focus();
     });
   });
