@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script>(function(){var r=document.documentElement,t,l;try{t=localStorage.getItem('raksa-theme');l=localStorage.getItem('raksa-language')}catch(e){}if(t!=='light'&&t!=='dark')t='system';if(l!=='fi'&&l!=='en'){l=(navigator.languages||[navigator.language||'']).some(function(x){return /^fi(\b|-)/i.test(x)})?'fi':'en'}r.dataset.theme=t;r.dataset.resolvedTheme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;r.lang=l})();</script>
 <title>Raksa | Rakennuslaskuri</title>
-<meta name="description" content="Raksa on Android-sovellus suorakulmaisen kolmion laskentaan ja rakennustyön mitoitukseen. Laskimet toimivat ilman verkkoyhteyttä ja käyttäjätiliä." data-i18n-content="pageDescription">
+<meta name="description" content="Raksa on Android-sovellus suorakulmaisen kolmion laskentaan, rakennustyön mitoitukseen ja huoneen pinta-aloihin. Laskimet toimivat ilman verkkoyhteyttä ja käyttäjätiliä." data-i18n-content="pageDescription">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F5F2EC">
 <link rel="canonical" href="https://www.rikalo.fi/raksa/">
@@ -13,20 +13,20 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=26">
+<link rel="stylesheet" href="style.css?v=27">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Raksa">
 <meta property="og:title" content="Raksa | Rakennuslaskuri" data-i18n-content="pageTitle">
-<meta property="og:description" content="Kolmiolaskin ja mitoitus rakennustyön käytännön tilanteisiin. Laskimet toimivat ilman verkkoyhteyttä." data-i18n-content="ogDescription">
+<meta property="og:description" content="Kolmiolaskin, mitoitus ja pinta-alat rakennustyön käytännön tilanteisiin. Laskimet toimivat ilman verkkoyhteyttä." data-i18n-content="ogDescription">
 <meta property="og:url" content="https://www.rikalo.fi/raksa/">
 <meta property="og:image" content="https://www.rikalo.fi/raksa/assets/social-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Raksa-rakennuslaskurin logo ja mitoitusnäkymä" data-i18n-content="ogImageAlt">
+<meta property="og:image:alt" content="Raksa-rakennuslaskurin logo ja pinta-alanäkymä" data-i18n-content="ogImageAlt">
 <meta property="og:locale" content="fi_FI">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<script src="site.js?v=26" defer></script>
+<script src="site.js?v=27" defer></script>
 </head>
 <body data-page="home">
 <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
@@ -60,7 +60,7 @@
     <div class="hero-text">
       <p class="eyebrow" data-i18n="eyebrow">Android-sovellus rakentamiseen</p>
       <h1 data-i18n="title">Mitat ja jaot selkeästi työmaalla</h1>
-      <p class="lead" data-i18n="lead">Raksa ratkaisee suorakulmaisen kolmion ja laskee mittapisteet toistuville rakenteille, kuten tolppajaolle ja rimoitukselle. Laskimet toimivat ilman verkkoyhteyttä ja käyttäjätiliä.</p>
+      <p class="lead" data-i18n="lead">Raksa ratkaisee suorakulmaisen kolmion, laskee mittapisteet toistuville rakenteille, kuten tolppajaolle ja rimoitukselle, sekä laskee huoneen pinta-alat. Laskimet toimivat ilman verkkoyhteyttä ja käyttäjätiliä.</p>
       <div class="actions">
         <span class="button play-pending" data-play-store><svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg><span data-i18n="playComing">Tulossa Google Playhin</span></span>
         <a class="button primary" href="beta" data-i18n="joinTest">Liity testaajaksi</a>
@@ -73,7 +73,7 @@
   <section id="tools" class="tools container">
     <div class="section-heading">
       <p class="eyebrow" data-i18n="toolsEyebrow">Työkalut</p>
-      <h2 data-i18n="toolsTitle">Kolmiolaskin ja mitoitus</h2>
+      <h2 data-i18n="toolsTitle">Kolmiolaskin, mitoitus ja pinta-alat</h2>
     </div>
 
     <article class="tool">
@@ -84,7 +84,7 @@
         <ul>
           <li data-i18n="tri1">Esimerkiksi ristimitat, kattokaltevuus ja vinotuen pituus</li>
           <li data-i18n="tri2">Kulmasäädin pysähtyy yleisiin kaltevuuksiin, kuten 1:2 ja 30°</li>
-          <li data-i18n="tri3">Kolmion kuva näyttää mitat ja kulmat yhdellä silmäyksellä</li>
+          <li data-i18n="tri3">Kolmion kuvaa voi zoomata ja tarkastella koko näytössä</li>
         </ul>
       </div>
       <figure class="phone-shot">
@@ -107,6 +107,22 @@
         <img data-shot="dimensions" src="assets/screens/dimensions-light-fi.webp" width="588" height="1350" loading="lazy" decoding="async" alt="Raksan mitoitus: Mitoitettu-tila, mitta 3000 mm, jako 600 mm ja materiaali 48 mm, tuloksena mittajana ja mittapisteet" data-i18n-alt="dimensionsAlt">
       </figure>
     </article>
+
+    <article class="tool">
+      <div class="tool-text">
+        <span class="tool-number">03</span>
+        <h3 data-i18n="areasTitle">Pinta-alat</h3>
+        <p data-i18n="areasText">Laske huoneen lattian, katon ja seinien pinta-alat. Valitse huoneen muoto ja anna mitat – kaksi mittaa riittää alkuun.</p>
+        <ul>
+          <li data-i18n="area1">Suorakulmainen, L-muotoinen, pyöreä, vino katto ja harjakatto</li>
+          <li data-i18n="area2">Ovet, ikkunat ja muut aukot vähennetään nimettävinä aukkoina</li>
+          <li data-i18n="area3">3D-kuva huoneesta: käännä, zoomaa ja muuta mittoja vetämällä</li>
+        </ul>
+      </div>
+      <figure class="phone-shot">
+        <img data-shot="areas" src="assets/screens/areas-light-fi.webp" width="588" height="1350" loading="lazy" decoding="async" alt="Raksan pinta-alat: suorakulmainen huone 4000 × 3000 × 2500 mm, 3D-kuva ja tulokset, lattia ja katto 12 m², seinät 35 m²" data-i18n-alt="areasAlt">
+      </figure>
+    </article>
   </section>
 
   <section class="features container" aria-labelledby="featuresTitle">
@@ -120,6 +136,7 @@
       <li><h3 data-i18n="f3Title">Tallentuu automaattisesti</h3><p data-i18n="f3Text">Arvot ja asetukset ovat tallessa, kun avaat sovelluksen uudelleen. Tyhjennyksen voi perua.</p></li>
       <li><h3 data-i18n="f4Title">Omat asetukset</h3><p data-i18n="f4Text">Yksiköt millimetreistä kilometreihin, 0–3 desimaalia sekä järjestelmän, vaalea tai tumma teema.</p></li>
       <li><h3 data-i18n="f5Title">Kielet</h3><p data-i18n="f5Text">Sovellus on suomeksi ja englanniksi. Lisäksi yli 50 kieltä on saatavilla automaattisena käännöksenä, joka voi olla epätarkka.</p></li>
+      <li><h3 data-i18n="f6Title">Laskut suoraan kenttään</h3><p data-i18n="f6Text">Raksan oma laskinnäppäimistö: kirjoita kenttään lasku, kuten 2400 ÷ 4 + 15, ja näet tuloksen heti.</p></li>
     </ul>
   </section>
 
@@ -130,7 +147,7 @@
       <p data-i18n="growText">Raksaan on tulossa lisää työkaluja. Ne näkyvät jo sovelluksen etusivulla merkinnällä Tulossa.</p>
     </div>
     <ul class="future-list">
-      <li data-i18n="next1">Pinta-alat ja tilavuudet</li>
+      <li data-i18n="next1">Tilavuudet</li>
       <li data-i18n="next2">Materiaalimenekit</li>
       <li data-i18n="next3">Lisää rakentamisen laskureita ja käytännön työkaluja</li>
     </ul>
@@ -147,7 +164,7 @@
     <a href="privacy.html" data-i18n="privacy">Tietosuoja</a>
     <a href="support.html" data-i18n="support">Tuki</a>
   </nav>
-  <small><span data-i18n="version">Versio 1.2.822</span> · © 2026 Rikalo</small>
+  <small><span data-i18n="version">Versio 1.3.14</span> · © 2026 Rikalo</small>
 </footer>
 </body>
 </html>

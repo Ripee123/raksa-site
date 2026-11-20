@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=26">
+<link rel="stylesheet" href="style.css?v=27">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Raksa">
 <meta property="og:title" content="Raksa | Tietosuojaseloste" data-i18n-content="privacyPageTitle">
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://www.rikalo.fi/raksa/privacy.html">
 <meta property="og:image" content="https://www.rikalo.fi/raksa/assets/social-preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<script src="site.js?v=26" defer></script>
+<script src="site.js?v=27" defer></script>
 </head>
 <body data-page="privacy">
 <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
@@ -57,8 +57,8 @@
     <p class="lead" data-i18n="privacyLead">Raksa-Android-sovelluksen ja tämän verkkosivun tietojen käsittely</p>
     <dl class="privacy-meta">
       <div><dt data-i18n="metaPackage">Pakettitunnus</dt><dd>fi.rikalo.raksa</dd></div>
-      <div><dt data-i18n="metaVersion">Sovellusversio</dt><dd>1.2.822</dd></div>
-      <div><dt data-i18n="metaUpdated">Päivitetty</dt><dd><time datetime="2026-11-18">18.11.2026</time></dd></div>
+      <div><dt data-i18n="metaVersion">Sovellusversio</dt><dd>1.3.14</dd></div>
+      <div><dt data-i18n="metaUpdated">Päivitetty</dt><dd><time datetime="2026-11-20">20.11.2026</time></dd></div>
     </dl>
   </div>
 
@@ -67,13 +67,13 @@
 
     <section id="yhteystiedot"><h2>1. Rekisterinpitäjä ja yhteystiedot</h2><p>Raksa-sovelluksen tietojen käsittelystä vastaa sovelluksen kehittäjä. Kehittäjän nimi ja sähköpostiosoite tietosuojakysymyksiä varten:</p><p data-contact="controller"><button type="button" class="reveal">Näytä yhteystiedot</button></p><p>Verkkosivu: <a href="https://www.rikalo.fi/raksa/">https://www.rikalo.fi/raksa/</a></p><noscript><p>Yhteystiedot näkyvät, kun JavaScript on käytössä.</p></noscript></section>
 
-    <section><h2>2. Sovelluksen käsittelemät tiedot</h2><p>Raksa käsittelee vain sovelluksen toimintaan tarvittavia tietoja:</p><ul><li>laskureihin syötetyt arvot ja laskinten tila</li><li>asetukset: mittayksikkö, desimaalit, teema, kieli ja mitoituksen asetukset</li><li>tieto siitä, että olet hyväksynyt automaattisen käännöksen huomautuksen</li><li>automaattisesti käännetyn kielen käännetyt sovellustekstit.</li></ul><p>Sovellus ei pyydä nimeä, sähköpostiosoitetta, sijaintia, yhteystietoja tai muita henkilötietoja, eikä siinä ole käyttäjätiliä.</p></section>
+    <section><h2>2. Sovelluksen käsittelemät tiedot</h2><p>Raksa käsittelee vain sovelluksen toimintaan tarvittavia tietoja:</p><ul><li>laskureihin syötetyt arvot, kenttiin kirjoitetut laskut ja laskinten tila</li><li>asetukset: mittayksikkö, desimaalit, teema, kieli ja mitoituksen asetukset</li><li>tieto siitä, että olet hyväksynyt automaattisen käännöksen huomautuksen</li><li>automaattisesti käännetyn kielen käännetyt sovellustekstit.</li></ul><p>Sovellus ei pyydä nimeä, sähköpostiosoitetta, sijaintia, yhteystietoja tai muita henkilötietoja, eikä siinä ole käyttäjätiliä.</p></section>
 
     <section><h2>3. Paikallinen tallennus</h2><p>Tiedot tallennetaan sovelluksen yksityiseen tallennustilaan laitteessa:</p><ul><li>asetukset, kielivalinta ja laskinten tila</li><li>automaattisesti käännetyn kielen käännetyt sovellustekstit</li><li>ML Kitin kielimalli (noin 30 Mt), jota ML Kit hallitsee</li><li>jaettava tuloskuva sovelluksen väliaikaisessa välimuistissa.</li></ul></section>
 
     <section><h2>4. Android-käyttöoikeudet</h2><p>Sovellus käyttää kahta tavallista käyttöoikeutta, joita Android ei kysy erikseen:</p><ul><li><strong>Internet</strong> (INTERNET): automaattisesti käännetyn kielen kielimallin lataus ja ML Kitin diagnostiikka</li><li><strong>Verkon tila</strong> (ACCESS_NETWORK_STATE): verkkoyhteyden tarkistus ennen kielimallin latausta.</li></ul><p>Sovellus ei pyydä sijainti-, kamera-, mikrofoni-, yhteystieto-, tiedosto-, ilmoitus- tai tilioikeuksia.</p></section>
 
-    <section><h2>5. Verkkoyhteys ja Google ML Kit Translation</h2><p>Kolmiolaskin, Mitoitus, suomi, englanti, asetukset, tallennus, kopiointi ja jakaminen toimivat ilman verkkoyhteyttä.</p><p>Suomi ja englanti ovat sovelluksen omia käännöksiä. Muut kielet käännetään automaattisesti Google ML Kit Translation -kirjastolla (käännökset tuottaa Google Translate). Kun valitset tällaisen kielen, sovellus näyttää ensin huomautuksen. Hyväksynnän jälkeen kielimalli ladataan Googlen palvelimilta kerran, mikä vaatii verkkoyhteyden. Käännös tehdään laitteessa, ja vain sovelluksen omat tekstit käännetään. Laskenta- ja mittaustietoja tai syöttämiäsi arvoja ei lähetetä käännettäväksi.</p><p>ML Kit kerää käännöstoiminnon yhteydessä diagnostiikka- ja käyttötietoja ja lähettää ne Googlelle. Googlen ilmoituksen mukaan tietoja ovat esimerkiksi laitetiedot (valmistaja, malli ja käyttöjärjestelmän versio), sovelluksen pakettinimi ja versio, asennuskohtaiset tunnisteet, suorituskykymittarit, tapahtumatyypit ja virhekoodit sekä valitut lähde- ja kohdekielet. Googlen mukaan tiedot salataan siirron aikana (HTTPS), eikä niitä luovuteta kolmansille osapuolille. Google käsittelee tietoja omien ehtojensa mukaisesti; lisätietoja: <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kitin tietojen käsittely</a> ja <a href="https://developers.google.com/ml-kit/terms">ML Kitin käyttöehdot</a>.</p></section>
+    <section><h2>5. Verkkoyhteys ja Google ML Kit Translation</h2><p>Kolmiolaskin, Mitoitus, Pinta-alat, suomi, englanti, asetukset, tallennus, kopiointi ja jakaminen toimivat ilman verkkoyhteyttä.</p><p>Suomi ja englanti ovat sovelluksen omia käännöksiä. Muut kielet käännetään automaattisesti Google ML Kit Translation -kirjastolla (käännökset tuottaa Google Translate). Kun valitset tällaisen kielen, sovellus näyttää ensin huomautuksen. Hyväksynnän jälkeen kielimalli ladataan Googlen palvelimilta kerran, mikä vaatii verkkoyhteyden. Käännös tehdään laitteessa, ja vain sovelluksen omat tekstit käännetään. Laskenta- ja mittaustietoja tai syöttämiäsi arvoja ei lähetetä käännettäväksi.</p><p>ML Kit kerää käännöstoiminnon yhteydessä diagnostiikka- ja käyttötietoja ja lähettää ne Googlelle. Googlen ilmoituksen mukaan tietoja ovat esimerkiksi laitetiedot (valmistaja, malli ja käyttöjärjestelmän versio), sovelluksen pakettinimi ja versio, asennuskohtaiset tunnisteet, suorituskykymittarit, tapahtumatyypit ja virhekoodit sekä valitut lähde- ja kohdekielet. Googlen mukaan tiedot salataan siirron aikana (HTTPS), eikä niitä luovuteta kolmansille osapuolille. Google käsittelee tietoja omien ehtojensa mukaisesti; lisätietoja: <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kitin tietojen käsittely</a> ja <a href="https://developers.google.com/ml-kit/terms">ML Kitin käyttöehdot</a>.</p></section>
 
     <section><h2>6. Kopiointi ja tulosten jakaminen</h2><p>Kun napautat tulosarvoa, Raksa kopioi luvun Androidin leikepöydälle. Leikepöytää hallitsee käyttöjärjestelmä.</p><p>Kun valitset tulosten jakamisen, Raksa piirtää tuloskortista kuvan sovelluksen väliaikaiseen välimuistiin ja avaa Androidin jakovalikon. Kuva siirtyy vain valitsemaasi sovellukseen tai palveluun, ja siihen sovelletaan sen ehtoja. Raksa ei lähetä kuvaa itse.</p></section>
 
@@ -95,13 +95,13 @@
 
     <section id="contact"><h2>1. Controller and contact</h2><p>The developer of the app is responsible for Raksa's data handling. The developer's name and email address for privacy questions:</p><p data-contact="controller"><button type="button" class="reveal">Show contact details</button></p><p>Website: <a href="https://www.rikalo.fi/raksa/">https://www.rikalo.fi/raksa/</a></p><noscript><p>Contact details are shown when JavaScript is enabled.</p></noscript></section>
 
-    <section><h2>2. Data processed by the app</h2><p>Raksa processes only the information the app needs to work:</p><ul><li>values entered in the calculators and calculator state</li><li>settings: measurement unit, decimal places, theme, language and dimensioning settings</li><li>a record that you have accepted the automatic translation notice</li><li>the translated app texts for an automatically translated language.</li></ul><p>The app does not ask for your name, email address, location, contacts or other personal data, and it has no user account.</p></section>
+    <section><h2>2. Data processed by the app</h2><p>Raksa processes only the information the app needs to work:</p><ul><li>values and calculations entered in the calculators, and calculator state</li><li>settings: measurement unit, decimal places, theme, language and dimensioning settings</li><li>a record that you have accepted the automatic translation notice</li><li>the translated app texts for an automatically translated language.</li></ul><p>The app does not ask for your name, email address, location, contacts or other personal data, and it has no user account.</p></section>
 
     <section><h2>3. Local storage</h2><p>The information is stored in the app's private storage on the device:</p><ul><li>settings, language choice and calculator state</li><li>the translated app texts for an automatically translated language</li><li>the ML Kit language model (about 30 MB), managed by ML Kit</li><li>a shareable result image in the app's temporary cache.</li></ul></section>
 
     <section><h2>4. Android permissions</h2><p>The app uses two normal permissions that Android does not ask you about separately:</p><ul><li><strong>Internet</strong> (INTERNET): downloading the language model for an automatically translated language, and ML Kit diagnostics</li><li><strong>Network state</strong> (ACCESS_NETWORK_STATE): checking the connection before the language model is downloaded.</li></ul><p>The app does not request location, camera, microphone, contacts, file, notification or account permissions.</p></section>
 
-    <section><h2>5. Network use and Google ML Kit Translation</h2><p>The triangle calculator, dimensioning, Finnish, English, settings, saving, copying and sharing all work without an internet connection.</p><p>Finnish and English are the app's own translations. Other languages are translated automatically with the Google ML Kit Translation library (translations powered by Google Translate). When you choose such a language, the app first shows a notice. After you accept it, the language model is downloaded from Google's servers once, which requires a network connection. Translation happens on the device, and only the app's own texts are translated. Calculation and measurement data and the values you enter are not sent for translation.</p><p>In connection with the translation feature, ML Kit collects diagnostic and usage data and sends it to Google. According to Google, this includes device information (manufacturer, model and operating system version), the app's package name and version, per-installation identifiers, performance metrics, event types and error codes, and the selected source and target languages. According to Google, the data is encrypted in transit (HTTPS) and is not transferred to third parties. Google processes the data under its own terms; more information: <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a> and <a href="https://developers.google.com/ml-kit/terms">ML Kit Terms of Service</a>.</p></section>
+    <section><h2>5. Network use and Google ML Kit Translation</h2><p>The triangle calculator, dimensioning, areas, Finnish, English, settings, saving, copying and sharing all work without an internet connection.</p><p>Finnish and English are the app's own translations. Other languages are translated automatically with the Google ML Kit Translation library (translations powered by Google Translate). When you choose such a language, the app first shows a notice. After you accept it, the language model is downloaded from Google's servers once, which requires a network connection. Translation happens on the device, and only the app's own texts are translated. Calculation and measurement data and the values you enter are not sent for translation.</p><p>In connection with the translation feature, ML Kit collects diagnostic and usage data and sends it to Google. According to Google, this includes device information (manufacturer, model and operating system version), the app's package name and version, per-installation identifiers, performance metrics, event types and error codes, and the selected source and target languages. According to Google, the data is encrypted in transit (HTTPS) and is not transferred to third parties. Google processes the data under its own terms; more information: <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a> and <a href="https://developers.google.com/ml-kit/terms">ML Kit Terms of Service</a>.</p></section>
 
     <section><h2>6. Copying and sharing results</h2><p>When you tap a result value, Raksa copies the number to the Android clipboard. The clipboard is managed by the operating system.</p><p>When you choose to share results, Raksa draws an image of the result card into the app's temporary cache and opens the Android share sheet. The image goes only to the app or service you choose, and that recipient's terms apply. Raksa does not send the image itself.</p></section>
 
@@ -125,7 +125,7 @@
     <a href="./" data-i18n="home">Etusivu</a>
     <a href="support.html" data-i18n="support">Tuki</a>
   </nav>
-  <small><span data-i18n="version">Versio 1.2.822</span> · © 2026 Rikalo</small>
+  <small><span data-i18n="version">Versio 1.3.14</span> · © 2026 Rikalo</small>
 </footer>
 </body>
 </html>
